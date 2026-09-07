@@ -1,0 +1,3 @@
+UnityPy==1.25.3
+TypeTreeGeneratorAPI
+Pillow>=10

@@ -1,0 +1,174 @@
+{
+  "$schema": "패치 대상 정의. pathID를 쓰지 않고 이름·크기·내용으로 찾는다.",
+  "patch_version": "1.0.0",
+  "game": {
+    "title": "시희지몽 (The Dreamland of Lady Zombie)",
+    "unity": "2022.3.52f1",
+    "backend": "Mono",
+    "data_dir": "DreamOfLadyZombie_Data"
+  },
+  "verified_builds": [
+    {
+      "assembly_sha256": "21e4e5ca905d9a21e13a74723a064e85e643115e166b16b0315fd8917d67cfb6",
+      "checked": "2026-09-07",
+      "note": "이 빌드에서 검증. 다른 빌드에서도 탐색은 이름·내용 기반이라 동작한다."
+    }
+  ],
+  "assets": [
+    "resources.assets",
+    "sharedassets0.assets",
+    "sharedassets1.assets"
+  ],
+  "translation": {
+    "file": "translation.csv",
+    "column": "Korean",
+    "inject_into_language_index": 0,
+    "rename_language": {
+      "from_code": "zh",
+      "name": "한국어",
+      "code": "ko"
+    }
+  },
+  "font": {
+    "file": "KR_All_Chungju.ttf",
+    "note": "교체 대상 Font는 CJK TMP 폰트 애셋의 m_SourceFontFile에서 역산한다."
+  },
+  "images": {
+    "dir": "images",
+    "entries": [
+      {
+        "file": "A_LvUpWord_1612.png",
+        "texture": "LvUpWord",
+        "size": [
+          261,
+          121
+        ]
+      },
+      {
+        "file": "A_RetrainersTargetTip_4426.png",
+        "texture": "RetrainersTargetTip",
+        "size": [
+          512,
+          768
+        ]
+      },
+      {
+        "file": "A_Word_victory_4778.png",
+        "texture": "Word_victory",
+        "size": [
+          1292,
+          236
+        ]
+      },
+      {
+        "file": "A_enemyturn.png",
+        "texture": "敌方回合",
+        "size": [
+          310,
+          129
+        ]
+      },
+      {
+        "file": "A_jiaocheng.png",
+        "texture": "教程",
+        "size": [
+          132,
+          68
+        ]
+      },
+      {
+        "file": "A_lose_2794.png",
+        "texture": "lose",
+        "size": [
+          1292,
+          238
+        ]
+      },
+      {
+        "file": "A_myturn.png",
+        "texture": "我方回合",
+        "size": [
+          311,
+          129
+        ]
+      },
+      {
+        "file": "A_pick_2647.png",
+        "texture": "pick",
+        "size": [
+          1204,
+          828
+        ]
+      },
+      {
+        "file": "A_qipai.png",
+        "texture": "弃牌",
+        "size": [
+          232,
+          1220
+        ]
+      },
+      {
+        "file": "A_qipai2.png",
+        "texture": "弃牌2",
+        "size": [
+          272,
+          1476
+        ]
+      },
+      {
+        "file": "A_qipaitip.png",
+        "texture": "弃牌提示",
+        "size": [
+          176,
+          200
+        ]
+      },
+      {
+        "file": "A_shengji_float_2104.png",
+        "texture": "shengji_float",
+        "size": [
+          460,
+          664
+        ]
+      },
+      {
+        "file": "A_taunt_3851.png",
+        "texture": "taunt",
+        "size": [
+          256,
+          128
+        ]
+      },
+      {
+        "file": "A_win_1155.png",
+        "texture": "win",
+        "size": [
+          1292,
+          236
+        ]
+      },
+      {
+        "file": "A_yichang.png",
+        "texture": "异常最多",
+        "size": [
+          400,
+          180
+        ]
+      },
+      {
+        "file": "A_zhufu.png",
+        "texture": "诡道祝福",
+        "size": [
+          308,
+          480
+        ]
+      }
+    ]
+  },
+  "code_patch": {
+    "file": "Managed/Assembly-CSharp.dll",
+    "expect_sites": 4,
+    "note": "카드 툴팁 '###'의 [수치][스탯명] 순서를 뒤집는다."
+  }
+}

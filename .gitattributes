@@ -1,0 +1,7 @@
+* text=auto
+
+# 바이트 그대로 보존해야 하는 패치 데이터
+*.ttf  binary
+*.png  binary
+data/translation.csv -text
+data/manifest.json   -text

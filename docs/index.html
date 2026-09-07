@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>시희지몽 한글패치</title>
+<meta name="description" content="시희지몽(尸姬之梦) 비공식 한국어 패치.">
+<meta property="og:title" content="시희지몽 한글패치">
+<meta property="og:description" content="시희지몽(尸姬之梦) 비공식 한국어 패치.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#0e1312; --surface:#161e1d; --surface2:#1e2827;
+  --ink:#e9efed; --ink2:#a9b6b3; --ink3:#7b8886;
+  --line:#28332f; --jade:#4bb89f; --jade-d:#0f6b5a; --gold:#d6ac57;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:700px;margin:0 auto;padding:0 24px}
+h1,h2{font-family:"Gothic A1","Apple SD Gothic Neo",sans-serif;margin:0;text-wrap:balance}
+h1{font-size:clamp(36px,7vw,58px);font-weight:800;letter-spacing:-.03em;line-height:1.1}
+h2{font-size:23px;font-weight:800;letter-spacing:-.015em}
+h3{font-family:"Gothic A1",sans-serif;font-size:16px;font-weight:700;margin:0}
+p{margin:0}
+a{color:var(--jade)}
+code{font-family:"IBM Plex Mono",monospace;font-size:.86em;background:var(--surface2);
+  padding:.14em .42em;border-radius:4px;color:var(--ink2)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--jade);font-weight:500}
+
+.hero{padding:92px 0 60px;display:flex;flex-direction:column;gap:16px;
+  border-bottom:1px solid var(--line);
+  background:radial-gradient(120% 90% at 78% -10%, rgba(75,184,159,.13), transparent 62%)}
+.hero p.tag{color:var(--ink2);font-size:18px;max-width:48ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;align-items:center}
+.btn{display:inline-flex;align-items:center;text-decoration:none;border-radius:8px;
+  padding:15px 30px;font-weight:700;font-family:"Gothic A1",sans-serif;font-size:16px;
+  transition:transform .12s ease, background .12s ease}
+.btn.primary{background:var(--jade);color:#08201b}
+.btn.primary:hover{background:#63d3b8;transform:translateY(-1px)}
+.btn.ghost{border:1px solid var(--line);color:var(--ink2);background:var(--surface);padding:14px 26px}
+.btn.ghost:hover{border-color:var(--jade);color:var(--jade)}
+.meta{color:var(--ink3);font-size:13px;font-family:"IBM Plex Mono",monospace}
+
+section{padding:52px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:18px}
+section:last-of-type{border-bottom:0}
+section > p{color:var(--ink2);max-width:52ch}
+
+ol.steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:0}
+ol.steps li{display:flex;gap:18px;padding:16px 0;border-top:1px solid var(--line);align-items:center}
+ol.steps li:first-child{border-top:0}
+ol.steps .n{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+  background:var(--jade-d);color:#dff5ef;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500}
+ol.steps p{color:var(--ink2);font-size:15px}
+
+.note{border-left:3px solid var(--gold);background:rgba(214,172,87,.09);
+  padding:16px 20px;border-radius:0 8px 8px 0;color:var(--ink2);font-size:15px;
+  display:flex;flex-direction:column;gap:5px}
+.note b{color:var(--ink)}
+
+.cmd{position:relative;background:var(--surface);border:1px solid var(--line);
+  border-radius:8px;padding:16px 90px 16px 18px;overflow-x:auto}
+.cmd code{background:none;padding:0;color:var(--ink2);white-space:pre;font-size:12.5px;line-height:1.6}
+.cmd button{position:absolute;top:10px;right:10px;border:1px solid var(--line);
+  background:var(--surface2);color:var(--ink2);font-family:"Gothic A1",sans-serif;
+  font-size:13px;font-weight:700;padding:7px 14px;border-radius:6px;cursor:pointer}
+.cmd button:hover{border-color:var(--jade);color:var(--jade)}
+.cmd button.done{border-color:var(--jade);color:var(--jade)}
+
+footer{padding:40px 0 72px;color:var(--ink3);font-size:13px;display:flex;flex-direction:column;gap:7px}
+footer a{color:var(--ink2)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">비공식 한국어 패치</span>
+    <h1>시희지몽<br>한글패치</h1>
+    <p class="tag">尸姬之梦 · The Dreamland of Lady Zombie</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/releases/download/latest/Dreamland-KR-Patch.exe" download>다운로드</a>
+      <a class="btn ghost" href="#run">명령어로 실행</a>
+      <a class="btn ghost" href="https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR">GitHub</a>
+      <span class="meta">Windows · Steam판</span>
+    </div>
+  </header>
+
+  <section>
+    <span class="eyebrow">설치</span>
+    <ol class="steps">
+      <li><span class="n">1</span><p><a href="https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/releases/download/latest/Dreamland-KR-Patch.exe" download><code>Dreamland-KR-Patch.exe</code></a>를 내려받습니다.</p></li>
+      <li><span class="n">2</span><p>실행하면 게임 폴더를 자동으로 찾습니다. 못 찾으면 <b>찾아보기</b>로 지정합니다.</p></li>
+      <li><span class="n">3</span><p><b>설치</b>를 누릅니다.</p></li>
+    </ol>
+    <div class="note">
+      <b>Windows의 PC 보호 창이 뜨면</b>
+      <span><b>자세히 → 실행</b>을 누릅니다. 서명되지 않은 프로그램이 게임 파일을
+      수정하기 때문에 나타나는 경고입니다.</span>
+    </div>
+  </section>
+
+
+  <section id="run">
+    <span class="eyebrow">또는</span>
+    <h2>명령어로 실행</h2>
+    <div class="cmd"><code id="cmdtext">curl.exe -L -o "$env:TEMP\KRPatch.exe" https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/releases/download/latest/Dreamland-KR-Patch.exe; Start-Process "$env:TEMP\KRPatch.exe"</code><button id="copybtn" type="button">복사</button></div>
+    <p class="meta">Win + X → 터미널 → 붙여넣기 → Enter</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">업데이트 후</span>
+    <h2>패처를 다시 실행</h2>
+    <p>스팀이 게임을 업데이트하면 패치가 원래대로 돌아갑니다. 패처를 다시 실행하면 됩니다.</p>
+    <p>원본은 게임 폴더의 <code>한글패치_원본백업/</code>에 보관됩니다.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">제보</span>
+    <h2>오역 제보</h2>
+    <p><a href="https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/issues/new">Issue</a>에
+       어떤 문구가 어떻게 이상한지 알려 주세요.</p>
+  </section>
+
+  <footer>
+    <div>비공식 팬 번역입니다. 시희지몽의 모든 권리는 원 개발사에 있습니다.</div>
+    <div><a href="https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/blob/main/THIRD-PARTY.md">글꼴 및 제3자 저작물 고지</a></div>
+  </footer>
+
+</div>
+<script>
+(function(){
+  var b=document.getElementById('copybtn'), t=document.getElementById('cmdtext');
+  if(!b||!t) return;
+  b.addEventListener('click', function(){
+    var s=t.textContent;
+    var done=function(){ b.textContent='복사됨'; b.classList.add('done');
+      setTimeout(function(){ b.textContent='복사'; b.classList.remove('done'); }, 1600); };
+    if(navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(s).then(done, fallback);
+    } else { fallback(); }
+    function fallback(){
+      var a=document.createElement('textarea');
+      a.value=s; a.style.position='fixed'; a.style.opacity='0';
+      document.body.appendChild(a); a.select();
+      try{ document.execCommand('copy'); done(); }catch(e){}
+      document.body.removeChild(a);
+    }
+  });
+})();
+</script>
+</body>
+</html>
