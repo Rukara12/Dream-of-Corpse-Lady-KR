@@ -12,6 +12,9 @@ CJK_GLYPH_MIN = 1000
 # I2 언어 데이터 블롭은 1.6 MB 이상. 이보다 작은 MonoBehaviour는 후보에서 제외.
 I2_MIN_BYTES  = 200_000
 I2_MIN_TERMS  = 3000
+# CJK TMP 폰트 애셋은 실측 332 KB 이상, 라틴 전용은 29 KB 이하로 확실히 갈린다.
+# 이 필터가 없으면 sharedassets1 의 MonoBehaviour 39,483개를 전부 파싱하려 든다.
+TMP_MIN_BYTES = 100_000
 
 
 class NotFound(Exception):
@@ -54,7 +57,7 @@ def find_tmp_font_assets(env, node):
     """CJK용 TMP 폰트 애셋만 골라낸다. 라틴 전용은 건드리지 않는다."""
     out = []
     for o in env.objects:
-        if o.type.name != 'MonoBehaviour':
+        if o.type.name != 'MonoBehaviour' or o.byte_size < TMP_MIN_BYTES:
             continue
         try:
             t = o.read_typetree(node)
