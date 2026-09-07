@@ -7,7 +7,7 @@
 """
 import csv, hashlib, io, json, os, shutil, time
 
-from . import finder, ilpatch, i2
+from . import fastwrite, finder, ilpatch, i2
 
 BACKUP_DIR = '한글패치_원본백업'
 DLL_REL    = os.path.join('Managed', 'Assembly-CSharp.dll')
@@ -167,6 +167,7 @@ def step_font(ctx, env_cache):
     """CJK TMP 폰트 애셋을 찾고, 그것들이 참조하는 Font의 TTF를 갈아끼운다.
     Font를 이름으로 찾지 않으므로 동명이인(NotoSansSC-Regular 2개) 문제가 없다."""
     import UnityPy
+    fastwrite.install()
     ttf = open(os.path.join(ctx.res, ctx.man['font']['file']), 'rb').read()
     ctx.log('폰트 %s (%s B)' % (ctx.man['font']['file'], format(len(ttf), ',')))
     ctx.log('  타입트리 준비 중')
@@ -198,7 +199,7 @@ def step_font(ctx, env_cache):
         for o in env.objects:
             if o.type.name == 'Font' and o.path_id in pids:
                 t = o.read_typetree()
-                t['m_FontData'] = list(ttf)
+                t['m_FontData'] = ttf
                 o.save_typetree(t)
                 swapped += 1
                 ctx.log('    Font %s ← 교체' % t['m_Name'])
@@ -267,8 +268,14 @@ def step_code(ctx):
 
 # ─────────────────────────────────────────────── 저장
 def save_all(ctx, env_cache):
-    for n, env in env_cache.items():
+    """한 파일씩 쓰고 곧바로 메모리에서 놓아 준다."""
+    import gc
+    for n in list(env_cache):
+        env = env_cache.pop(n)
+        t0 = time.time()
         data = env.file.save()
         with open(os.path.join(ctx.out, n), 'wb') as f:
             f.write(data)
-        ctx.log('%s 저장 (%s B)' % (n, format(len(data), ',')))
+        ctx.log('%s 저장 (%s B, %.1f초)' % (n, format(len(data), ','), time.time() - t0))
+        del data, env
+        gc.collect()
