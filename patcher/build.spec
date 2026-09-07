@@ -10,14 +10,17 @@ datas    = [(os.path.join(ROOT, 'data'), 'data')]
 binaries = []
 hidden   = ['PIL._tkinter_finder']
 
-# UnityPy 전체. 네이티브 가속 모듈(UnityPyBoost)이 빠지면 타입트리를
-# 순수 파이썬으로 읽어 100배 이상 느려진다. 리소스만 넣어서는 안 된다.
-_ud, _ub, _uh = collect_all('UnityPy')
-datas += _ud; binaries += _ub; hidden += _uh
+# UnityPy 와 그것이 실행 중에 부르는 패키지들을 통째로 넣는다.
+# 하나라도 빠지면 exe 안에서만 죽거나(데이터 파일 누락) 100배 느려진다
+# (UnityPyBoost 누락). 리소스만 넣어서는 안 된다.
+for _pkg in ('UnityPy', 'TypeTreeGeneratorAPI', 'astc_encoder',
+             'texture2ddecoder', 'archspec', 'brotli', 'lz4', 'fsspec'):
+    try:
+        _d, _b, _h = collect_all(_pkg)
+    except Exception:
+        continue
+    datas += _d; binaries += _b; hidden += _h
 hidden += ['UnityPy.UnityPyBoost']
-# TypeTreeGeneratorAPI의 네이티브 라이브러리
-_d, _b, _h = collect_all('TypeTreeGeneratorAPI')
-datas += _d; binaries += _b; hidden += _h
 
 a = Analysis(
     [os.path.join(HERE, 'main.py')],

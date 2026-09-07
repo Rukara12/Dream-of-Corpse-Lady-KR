@@ -14,11 +14,6 @@ class _Null:
 if sys.stdout is None: sys.stdout = _Null()
 if sys.stderr is None: sys.stderr = _Null()
 
-import tkinter as tk
-from tkinter import ttk, filedialog, messagebox
-
-from core import locate, steps, finder
-
 APP  = '시희지몽 한글패치'
 BG   = '#1b2220'
 CARD = '#232c2a'
@@ -218,6 +213,80 @@ class App:
         self.emit(msg, 'err')
         self.emit('로그 파일: %s' % self.flog.path, 'err')
         self.q.put(('done', False, msg + '\n\n로그: ' + self.flog.path))
+
+
+def selftest():
+    """exe 안에서 필요한 것들이 실제로 살아 있는지 확인한다.
+
+    빌드 직후 CI가 이걸 돌린다. 의존성이 빠진 exe 가 배포되는 일을 막는다.
+    """
+    lines, ok = [], True
+
+    def check(label, fn):
+        nonlocal ok
+        try:
+            fn()
+            lines.append('OK   %s' % label)
+        except Exception as e:
+            ok = False
+            lines.append('실패 %s -> %r' % (label, e))
+
+    def _boost():
+        from UnityPy.helpers import TypeTreeHelper
+        if TypeTreeHelper.read_typetree_boost is None:
+            raise RuntimeError('UnityPyBoost 없음 (100배 느려짐)')
+
+    def _generator():
+        from UnityPy.helpers.TypeTreeGenerator import TypeTreeGenerator
+        TypeTreeGenerator('2022.3.52f1')
+
+    def _texture():
+        from core import noaudio
+        noaudio.install()
+        from UnityPy.export import Texture2DConverter
+        assert Texture2DConverter
+
+    def _data():
+        import json
+        res = resource_dir()
+        man = json.load(io.open(os.path.join(res, 'manifest.json'), encoding='utf-8'))
+        need = [man['translation']['file'], man['font']['file']]
+        need += [os.path.join(man['images']['dir'], e['file'])
+                 for e in man['images']['entries']]
+        for rel in need:
+            p = os.path.join(res, rel)
+            if not os.path.isfile(p) or os.path.getsize(p) == 0:
+                raise RuntimeError('동봉 데이터 없음: %s' % rel)
+
+    check('UnityPy 임포트', lambda: __import__('UnityPy'))
+    check('네이티브 가속(UnityPyBoost)', _boost)
+    check('타입트리 생성기', _generator)
+    check('텍스처 변환기', _texture)
+    check('Pillow', lambda: __import__('PIL.Image'))
+    check('tkinter', lambda: __import__('tkinter'))
+    check('동봉 데이터', _data)
+    check('패치 모듈', lambda: __import__('core.steps'))
+
+    report = '\n'.join(lines) + ('\n결과: 정상\n' if ok else '\n결과: 실패\n')
+    try:
+        with io.open('selftest.log', 'w', encoding='utf-8') as f:
+            f.write(report)
+    except Exception:
+        pass
+    try:
+        sys.stderr.write(report)
+    except Exception:
+        pass
+    return 0 if ok else 1
+
+
+if '--selftest' in sys.argv[1:]:
+    raise SystemExit(selftest())
+
+import tkinter as tk
+from tkinter import ttk, filedialog, messagebox
+
+from core import locate, steps, finder
 
 
 def main():

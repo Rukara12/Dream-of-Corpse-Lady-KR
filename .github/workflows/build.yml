@@ -38,6 +38,13 @@ jobs:
             if ($txt -notmatch $m) { throw "$m 이(가) exe 에 포함되지 않았습니다" }
             Write-Host "$m 포함 확인"
           }
+      - name: exe 자체 점검
+        shell: pwsh
+        run: |
+          $exe = (Get-ChildItem dist\*.exe | Select-Object -First 1).FullName
+          $p = Start-Process -FilePath $exe -ArgumentList '--selftest' -Wait -PassThru -WorkingDirectory dist
+          if (Test-Path dist\selftest.log) { Get-Content dist\selftest.log }
+          if ($p.ExitCode -ne 0) { throw "exe 자체 점검 실패 (종료코드 $($p.ExitCode))" }
       - name: 산출물 업로드
         uses: actions/upload-artifact@v4
         with:
