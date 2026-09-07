@@ -132,11 +132,14 @@ def step_font(ctx, env_cache):
     import UnityPy
     ttf = open(os.path.join(ctx.res, ctx.man['font']['file']), 'rb').read()
     ctx.log('폰트 %s (%s B)' % (ctx.man['font']['file'], format(len(ttf), ',')))
+    ctx.log('  타입트리 준비 중')
     node = tmp_node(ctx.game)
+    ctx.log('  타입트리 준비 완료')
 
     names = ctx.man['assets']
     envs, assets, refs = {}, {}, set()
     for n in names:
+        ctx.log('  %s 읽는 중' % n)
         env = env_cache.get(n) or UnityPy.load(src_path(ctx, n))
         envs[n] = env
         tmp = finder.find_tmp_font_assets(env, node)
@@ -147,6 +150,7 @@ def step_font(ctx, env_cache):
         raise finder.NotFound('교체할 Font 오브젝트를 찾지 못했습니다.')
 
     # 파일별 Font 교체
+    ctx.log('  Font %d개 교체 시작' % len(refs))
     swapped = 0
     per_file = {}
     for fname, pid in refs:
@@ -164,6 +168,7 @@ def step_font(ctx, env_cache):
                 ctx.log('    Font %s ← 교체' % t['m_Name'])
 
     # TMP 애셋 초기화 + 동적 모드
+    ctx.log('  TMP 애셋 초기화 중')
     fixed = 0
     for n in names:
         # 소스 폰트가 없는 애셋(JXZK2)은 같은 파일에서 교체한 Font를 물려준다.
