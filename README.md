@@ -1,14 +1,14 @@
 # 시희지몽 한글패치
 
-**시희지몽**(尸姬之梦 / The Dreamland of Lady Zombie)의 비공식 한국어 패치입니다.
+**시희지몽**(尸姬之梦 / Dream of Corpse Lady)의 비공식 한국어 패치입니다.
 
-### **[→ 설치하기](https://Rukara12.github.io/The-Dreamland-of-Lady-Zombie-KR/)**
+### **[→ 설치하기](https://Rukara12.github.io/Dream-of-Corpse-Lady-KR/)**
 
 ---
 
 ## 설치
 
-1. [`Dreamland-KR-Patch.exe`](https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/releases/download/latest/Dreamland-KR-Patch.exe)를 내려받습니다.
+1. [`DreamOfCorpseLady-KR-Patch.exe`](https://github.com/Rukara12/Dream-of-Corpse-Lady-KR/releases/download/latest/DreamOfCorpseLady-KR-Patch.exe)를 내려받습니다.
 2. 실행하면 게임 폴더를 자동으로 찾습니다. 못 찾으면 **찾아보기**로 지정합니다.
 3. **설치**를 누릅니다.
 
@@ -20,7 +20,7 @@
 PowerShell(Win + X → 터미널):
 
 ```powershell
-curl.exe -L -o "$env:TEMP\KRPatch.exe" https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/releases/download/latest/Dreamland-KR-Patch.exe; Start-Process "$env:TEMP\KRPatch.exe"
+curl.exe -L -o "$env:TEMP\KRPatch.exe" https://github.com/Rukara12/Dream-of-Corpse-Lady-KR/releases/download/latest/DreamOfCorpseLady-KR-Patch.exe; Start-Process "$env:TEMP\KRPatch.exe"
 ```
 
 ## 게임 업데이트 후
@@ -31,7 +31,7 @@ curl.exe -L -o "$env:TEMP\KRPatch.exe" https://github.com/Rukara12/The-Dreamland
 
 ## 오역 제보
 
-[Issue](https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/issues/new)에 어떤 문구가 어떻게 이상한지 알려 주세요.
+[Issue](https://github.com/Rukara12/Dream-of-Corpse-Lady-KR/issues/new)에 어떤 문구가 어떻게 이상한지 알려 주세요.
 
 ## 라이선스
 

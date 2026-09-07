@@ -30,5 +30,5 @@ Noto Sans CJK 는 SIL Open Font License, Version 1.1 로 배포됩니다.
 패치는 사용자 PC에 설치된 게임 파일을 그 자리에서 변형할 뿐이며,
 번역문·글꼴·식질 이미지만 배포합니다.
 
-시희지몽(尸姬之梦 / The Dreamland of Lady Zombie)의 모든 권리는
+시희지몽(尸姬之梦 / Dream of Corpse Lady)의 모든 권리는
 원 개발사에 있습니다. 이 패치는 비공식 팬 번역입니다.

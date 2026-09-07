@@ -28,7 +28,7 @@ a = Analysis(
 pyz = PYZ(a.pure)
 exe = EXE(
     pyz, a.scripts, a.binaries, a.datas, [],
-    name='Dreamland-KR-Patch',
+    name='DreamOfCorpseLady-KR-Patch',
     console=False,
     upx=False,
     icon=None,

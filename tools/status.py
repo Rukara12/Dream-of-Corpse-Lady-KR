@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+"""docs/status.json 생성.
+
+번역 최종 갱신 시각 = data/ 를 마지막으로 건드린 커밋 시각
+게임 최종 갱신 시각 = Steam public 브랜치의 timeupdated (SteamDB가 보여 주는 값과 동일)
+"""
+import datetime, json, os, subprocess, sys, urllib.request
+
+APP  = '2842800'
+INFO = 'https://api.steamcmd.net/v1/info/%s' % APP
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT  = os.path.join(ROOT, 'docs', 'status.json')
+
+
+def iso(ts):
+    return datetime.datetime.fromtimestamp(int(ts), datetime.timezone.utc)\
+        .isoformat().replace('+00:00', 'Z')
+
+
+def game():
+    req = urllib.request.Request(INFO, headers={'User-Agent': 'DreamOfCorpseLady-KR'})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        j = json.load(r)
+    b = j['data'][APP]['depots']['branches']['public']
+    return iso(b['timeupdated']), str(b.get('buildid') or '')
+
+
+def translation():
+    out = subprocess.check_output(
+        ['git', 'log', '-1', '--format=%cI', '--', 'data'], cwd=ROOT)
+    return out.decode('utf-8').strip() or None
+
+
+def main():
+    data = {
+        'app': APP,
+        'translation_updated': translation(),
+        'game_updated': None,
+        'game_buildid': None,
+        'checked': iso(datetime.datetime.now(datetime.timezone.utc).timestamp()),
+    }
+    try:
+        data['game_updated'], data['game_buildid'] = game()
+    except Exception as e:
+        print('게임 정보 조회 실패: %s' % e, file=sys.stderr)
+
+    os.makedirs(os.path.dirname(OUT), exist_ok=True)
+    with open(OUT, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+        f.write('\n')
+    print(json.dumps(data, ensure_ascii=False))
+
+
+if __name__ == '__main__':
+    main()

@@ -45,6 +45,12 @@ code{font-family:"IBM Plex Mono",monospace;font-size:.86em;background:var(--surf
 .btn.ghost{border:1px solid var(--line);color:var(--ink2);background:var(--surface);padding:14px 26px}
 .btn.ghost:hover{border-color:var(--jade);color:var(--jade)}
 .meta{color:var(--ink3);font-size:13px;font-family:"IBM Plex Mono",monospace}
+.status{display:flex;align-items:center;gap:10px;margin-top:8px;
+  font-size:14px;color:var(--ink2)}
+.status .dot{width:8px;height:8px;border-radius:50%;background:var(--jade);flex:0 0 auto}
+.status.stale .dot{background:var(--gold)}
+.status b{color:var(--ink);font-weight:600}
+.status .sep{color:var(--ink3)}
 
 section{padding:52px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:18px}
 section:last-of-type{border-bottom:0}
@@ -82,19 +88,20 @@ footer a{color:var(--ink2)}
   <header class="hero">
     <span class="eyebrow">비공식 한국어 패치</span>
     <h1>시희지몽<br>한글패치</h1>
-    <p class="tag">尸姬之梦 · The Dreamland of Lady Zombie</p>
+    <p class="tag">尸姬之梦 · Dream of Corpse Lady</p>
     <div class="cta">
-      <a class="btn primary" href="https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/releases/download/latest/Dreamland-KR-Patch.exe" download>다운로드</a>
+      <a class="btn primary" href="https://github.com/Rukara12/Dream-of-Corpse-Lady-KR/releases/download/latest/DreamOfCorpseLady-KR-Patch.exe" download>다운로드</a>
       <a class="btn ghost" href="#run">명령어로 실행</a>
-      <a class="btn ghost" href="https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR">GitHub</a>
+      <a class="btn ghost" href="https://github.com/Rukara12/Dream-of-Corpse-Lady-KR">GitHub</a>
       <span class="meta">Windows · Steam판</span>
     </div>
+    <div class="status" id="status" hidden><span class="dot"></span><span id="stext"></span></div>
   </header>
 
   <section>
     <span class="eyebrow">설치</span>
     <ol class="steps">
-      <li><span class="n">1</span><p><a href="https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/releases/download/latest/Dreamland-KR-Patch.exe" download><code>Dreamland-KR-Patch.exe</code></a>를 내려받습니다.</p></li>
+      <li><span class="n">1</span><p><a href="https://github.com/Rukara12/Dream-of-Corpse-Lady-KR/releases/download/latest/DreamOfCorpseLady-KR-Patch.exe" download><code>DreamOfCorpseLady-KR-Patch.exe</code></a>를 내려받습니다.</p></li>
       <li><span class="n">2</span><p>실행하면 게임 폴더를 자동으로 찾습니다. 못 찾으면 <b>찾아보기</b>로 지정합니다.</p></li>
       <li><span class="n">3</span><p><b>설치</b>를 누릅니다.</p></li>
     </ol>
@@ -109,7 +116,7 @@ footer a{color:var(--ink2)}
   <section id="run">
     <span class="eyebrow">또는</span>
     <h2>명령어로 실행</h2>
-    <div class="cmd"><code id="cmdtext">curl.exe -L -o "$env:TEMP\KRPatch.exe" https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/releases/download/latest/Dreamland-KR-Patch.exe; Start-Process "$env:TEMP\KRPatch.exe"</code><button id="copybtn" type="button">복사</button></div>
+    <div class="cmd"><code id="cmdtext">curl.exe -L -o "$env:TEMP\KRPatch.exe" https://github.com/Rukara12/Dream-of-Corpse-Lady-KR/releases/download/latest/DreamOfCorpseLady-KR-Patch.exe; Start-Process "$env:TEMP\KRPatch.exe"</code><button id="copybtn" type="button">복사</button></div>
     <p class="meta">Win + X → 터미널 → 붙여넣기 → Enter</p>
   </section>
 
@@ -123,17 +130,38 @@ footer a{color:var(--ink2)}
   <section>
     <span class="eyebrow">제보</span>
     <h2>오역 제보</h2>
-    <p><a href="https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/issues/new">Issue</a>에
+    <p><a href="https://github.com/Rukara12/Dream-of-Corpse-Lady-KR/issues/new">Issue</a>에
        어떤 문구가 어떻게 이상한지 알려 주세요.</p>
   </section>
 
   <footer>
     <div>비공식 팬 번역입니다. 시희지몽의 모든 권리는 원 개발사에 있습니다.</div>
-    <div><a href="https://github.com/Rukara12/The-Dreamland-of-Lady-Zombie-KR/blob/main/THIRD-PARTY.md">글꼴 및 제3자 저작물 고지</a></div>
+    <div><a href="https://github.com/Rukara12/Dream-of-Corpse-Lady-KR/blob/main/THIRD-PARTY.md">글꼴 및 제3자 저작물 고지</a></div>
   </footer>
 
 </div>
 <script>
+(function(){
+  var box=document.getElementById('status'), txt=document.getElementById('stext');
+  if(!box) return;
+  function p(n){ return (n<10?'0':'')+n; }
+  function f(d){ return d.getFullYear()+'.'+p(d.getMonth()+1)+'.'+p(d.getDate())+
+                        ' '+p(d.getHours())+':'+p(d.getMinutes()); }
+  fetch('status.json?t='+Date.now()).then(function(r){ return r.ok?r.json():null; })
+  .then(function(s){
+    if(!s || !s.translation_updated) return;
+    var tr=new Date(s.translation_updated);
+    var h='번역 <b>'+f(tr)+'</b>';
+    if(s.game_updated){
+      var g=new Date(s.game_updated);
+      h+=' <span class="sep">·</span> 게임 <b>'+f(g)+'</b> <span class="sep">·</span> ';
+      if(tr>=g){ h+='최신 게임 버전 반영'; }
+      else { box.classList.add('stale'); h+='게임 업데이트 미반영'; }
+    }
+    txt.innerHTML=h;
+    box.hidden=false;
+  }).catch(function(){});
+})();
 (function(){
   var b=document.getElementById('copybtn'), t=document.getElementById('cmdtext');
   if(!b||!t) return;

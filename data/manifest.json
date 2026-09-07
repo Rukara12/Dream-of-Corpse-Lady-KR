@@ -2,7 +2,7 @@
   "$schema": "패치 대상 정의. pathID를 쓰지 않고 이름·크기·내용으로 찾는다.",
   "patch_version": "1.0.0",
   "game": {
-    "title": "시희지몽 (The Dreamland of Lady Zombie)",
+    "title": "시희지몽 (Dream of Corpse Lady)",
     "unity": "2022.3.52f1",
     "backend": "Mono",
     "data_dir": "DreamOfLadyZombie_Data"

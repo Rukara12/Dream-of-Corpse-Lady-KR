@@ -4,3 +4,4 @@ build/
 dist/
 *.spec.bak
 한글패치_원본백업/
+docs/status.json
