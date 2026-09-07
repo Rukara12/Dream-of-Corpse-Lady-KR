@@ -174,7 +174,17 @@ class App:
         self.busy = True
         self.btn.configure(state='disabled', text='설치 중...')
         self.emit('로그: %s' % self.flog.path)
+        threading.Thread(target=self._beat, daemon=True).start()
         threading.Thread(target=self._run, args=(game,), daemon=True).start()
+
+    def _beat(self):
+        """멈춘 것인지 느린 것인지 로그 파일로 구분할 수 있게 한다."""
+        n = 0
+        while self.busy:
+            time.sleep(5)
+            n += 5
+            if self.busy:
+                self.flog.write('  … 진행 중 %d초' % n)
 
     def _run(self, game):
         try:

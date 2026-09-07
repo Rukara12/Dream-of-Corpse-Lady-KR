@@ -5,7 +5,7 @@
   1. 항상 백업본에서 읽는다  -> 몇 번을 돌려도 결과가 같다
   2. 하나라도 못 찾으면 아무것도 쓰지 않는다  -> 반쯤 적용된 상태를 만들지 않는다
 """
-import csv, hashlib, io, json, os, shutil
+import csv, hashlib, io, json, os, shutil, time
 
 from . import finder, ilpatch, i2
 
@@ -43,6 +43,15 @@ def ensure_backup(ctx):
         made += 1
     if made:
         ctx.log('원본 백업 %d개 생성' % made)
+    for rel in files:
+        dst = os.path.join(ctx.backup, os.path.basename(rel))
+        live = os.path.join(ctx.gd, rel)
+        try:
+            a, b = os.path.getsize(dst), os.path.getsize(live)
+        except OSError:
+            continue
+        ctx.log('  %s 백업 %s B / 현재 %s B' %
+                (os.path.basename(rel), format(a, ','), format(b, ',')))
     return {n: os.path.join(ctx.backup, n) for n in
             [os.path.basename(f) for f in files]}
 
@@ -50,6 +59,34 @@ def ensure_backup(ctx):
 def src_path(ctx, name):
     """항상 백업본 경로를 돌려준다."""
     return os.path.join(ctx.backup, os.path.basename(name))
+
+
+def load_asset(ctx, name):
+    """애셋 파일을 UnityPy에 넘기기 전에 한 번 통째로 훑는다.
+
+    UnityPy는 파일을 잘게 나눠 읽는데, 백신 실시간 검사가 켜져 있으면
+    그 잔읽기마다 검사가 붙어 몇 분씩 멈춘 것처럼 보인다. 순차로 한 번
+    읽어 두면 검사가 한 번에 끝나고 이후 읽기는 캐시에서 나온다.
+    """
+    import UnityPy
+    p = src_path(ctx, name)
+    size = os.path.getsize(p)
+    ctx.log('  %s 읽는 중 (%s B)' % (name, format(size, ',')))
+    t0 = time.time()
+    got = 0
+    with open(p, 'rb') as f:
+        while True:
+            chunk = f.read(8 << 20)
+            if not chunk:
+                break
+            got += len(chunk)
+    if got != size:
+        raise finder.NotFound('%s 를 끝까지 읽지 못했습니다. (%s / %s B)'
+                              % (name, format(got, ','), format(size, ',')))
+    ctx.log('  %s 읽기 완료 (%.1f초)' % (name, time.time() - t0))
+    env = UnityPy.load(p)
+    ctx.log('  %s 해석 완료 (%.1f초)' % (name, time.time() - t0))
+    return env
 
 
 # ─────────────────────────────────────────────── 1. 번역
@@ -71,7 +108,7 @@ def step_translate(ctx, env_cache):
     kor = load_korean(os.path.join(ctx.res, cfg['file']), cfg['column'])
     ctx.log('번역 항목 %d개' % len(kor))
 
-    env = UnityPy.load(src_path(ctx, 'resources.assets'))
+    env = load_asset(ctx, 'resources.assets')
     obj, data = finder.find_i2(env)
     src = data['mSource']
     idx = cfg['inject_into_language_index']
@@ -139,8 +176,7 @@ def step_font(ctx, env_cache):
     names = ctx.man['assets']
     envs, assets, refs = {}, {}, set()
     for n in names:
-        ctx.log('  %s 읽는 중' % n)
-        env = env_cache.get(n) or UnityPy.load(src_path(ctx, n))
+        env = env_cache.get(n) or load_asset(ctx, n)
         envs[n] = env
         tmp = finder.find_tmp_font_assets(env, node)
         assets[n] = tmp
@@ -199,7 +235,7 @@ def step_image(ctx, env_cache):
     by_tex = {e['texture']: e for e in entries}
 
     name = 'sharedassets1.assets'
-    env = env_cache.get(name) or UnityPy.load(src_path(ctx, name))
+    env = env_cache.get(name) or load_asset(ctx, name)
     hits = finder.find_textures(env, wanted)
 
     done = 0
