@@ -28,12 +28,19 @@ jobs:
         with:
           name: patcher
           path: dist/*.exe
+      - name: latest 태그 이동
+        if: github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          git tag -f latest
+          git push -f origin latest
       - name: latest 릴리스 갱신
         if: github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
           name: 최신 빌드
+          body: Dreamland-KR-Patch.exe
           prerelease: true
           make_latest: false
           files: dist/*.exe
