@@ -513,7 +513,7 @@ Card_Info/10084,对相邻的2/3名敌人造成三次<Demage>，此伤害有<$Blo
 Card_Info/20084,对目标造成<#HitCount#>次<Demage>，此伤害有<$BloodSuck$>%吸血。\n九尾增幅：伤害段数+2,"Deal <#HitCount#> instances of <Demage> to the target, with a <$BloodSuck$>% [Lifesteal].\nNine-Tails Amplification: Damage hit count +2",ターゲットに<Demage>ダメージを<#HitCount#>回与える。このダメージは<$BloodSuck$>%の吸血を持つ。\n九尾増幅：ダメージの段数 +2,Наносит цели <Demage> урона <#HitCount#> раз. Урон имеет <$BloodSuck$>% [Кражей жизни].\nУсиление девятихвостой: количество ударов +2.,"대상에게 <Demage>의 피해를 <#HitCount#>회 입히며, 이 피해는 <$BloodSuck$>%의 흡혈 효과를 가집니다.\n구미 발현: 피해 횟수 +2"
 Card_Info/85,对全场敌方单位施加<#BuffCount#>【脱水】，并为全场我方单位恢复<Demage>,"Inflict <#BuffCount#> stacks of [Dehydration] on all enemies, and restore <Demage> to all allies",すべての敵ユニットに「脱水」を<#BuffCount#>付与し、すべての味方ユニットを<Demage>回復する。,Накладывает <#BuffCount#> [Обезвоживание] на всех врагов и восстанавливает <Demage> всем союзникам.,"필드 전체의 적에게 【탈수】를 <#BuffCount#>만큼 부여하고, 아군 전체의 생명력을 <Demage>만큼 회복시킵니다."
 Card_Info/10085,对全场敌方单位施加<#BuffCount#>【脱水】，并为全场我方单位恢复<Demage>,"Inflict <#BuffCount#> stacks of [Dehydration] on all enemies, and restore <Demage> to all allies",すべての敵ユニットに「脱水」を<#BuffCount#>付与し、すべての味方ユニットを<Demage>回復する。,Накладывает <#BuffCount#> [Обезвоживание] на всех врагов и восстанавливает <Demage> всем союзникам.,"필드 전체의 적 전체에게 【탈수】를 <#BuffCount#>만큼 부여하고, 아군 전체의 생명력을 <Demage>만큼 회복시킵니다."
-Card_Info/20085,对全场敌方单位随机施加总计<#BuffCount#>【脱水】，并为全场我方单位恢复<Demage>,"Randomly inflict a total of <#BuffCount#> stacks of [Dehydration] among all enemies, and restore <Demage> to all allies",すべての敵ユニットにランダムで「脱水」を合計<#BuffCount#>付与し、すべての味方ユニットを<Demage>回復する。,Случайно накладывает в сумме <#BuffCount#> [Обезвоживание] среди всех врагов и восстанавливает <Demage> всем союзникам.,"필드 전체의 적에게 무작위로 【탈수】를 총 <#BuffCount#>중첩만큼 부여하고, 아군 전체의 생명력을 <Demage>만큼 회복시킵니다."
+Card_Info/20085,对全场敌方单位随机施加总计<#BuffCount#>【脱水】，并为全场我方单位恢复<Demage>,"Randomly inflict a total of <#BuffCount#> stacks of [Dehydration] among all enemies, and restore <Demage> to all allies",すべての敵ユニットにランダムで「脱水」を合計<#BuffCount#>付与し、すべての味方ユニットを<Demage>回復する。,Случайно накладывает в сумме <#BuffCount#> [Обезвоживание] среди всех врагов и восстанавливает <Demage> всем союзникам.,"필드 전체의 적에게 무작위로 【탈수】를 총 <#BuffCount#>만큼 부여하고, 아군 전체의 생명력을 <Demage>만큼 회복시킵니다."
 Card_Info/86,对目标及左右单位造成<Demage>并【标记】目标,Deal <Demage> to the target and its adjacent units. [Mark] the target,ターゲット及び隣接ユニットに<Demage>ダメージを与え、ターゲットを「マーク」する。,Наносит <color=#6196FE>【<Demage> ед. урона картой】</color> цели и соседним юнитам. [Помечает] цель.,대상 및 좌우 유닛에게 <Demage>의 피해를 입히고 대상에게 【표식】을 남깁니다.
 Card_Info/87,攻击目标造成<Demage>（视为普攻），若场上存在【标记】敌人，则额外对所有【标记】造成同等伤害。,"Attack the target, dealing <Demage> (counted as a Basic Attack). Deal equal damage to all [Marked] enemies (if any).",ターゲットに<Demage>ダメージを与える（通常攻撃としてみなす）。フィールドに「マーク」された敵がいる場合、追加ですべての「マーク」に同量のダメージを与える。,"Атакует цель, нанося <Demage> (считается базовой атакой). Наносит равный урон всем [Помеченным] врагам (если есть).","대상을 공격하여 <Demage>의 피해를 입힙니다 (일반 공격으로 간주). 필드에 【표식】 상태의 적이 있다면, 모든 【표식】 대상에게 동일한 수치의 추가 피해를 입힙니다."
 Card_Info/10087,攻击目标造成<Demage>（视为普攻），若场上存在【标记】敌人，则额外对所有【标记】造成同等伤害。,"Attack the target, dealing <Demage> (counted as a Basic Attack). Deal equal damage to all [Marked] enemies (if any).",ターゲットに<Demage>ダメージを与える（通常攻撃としてみなす）。フィールドに「マーク」された敵がいる場合、追加ですべての「マーク」に同量のダメージを与える。,"Атакует цель, нанося <Demage> (считается базовой атакой). Наносит равный урон всем [Помеченным] врагам (если есть).","대상을 공격하여 <Demage>의 피해를 입힙니다 (일반 공격으로 간주). 필드에 【표식】 상태의 적이 있다면, 모든 【표식】 대상에게 동일한 수치의 추가 피해를 입힙니다."
@@ -812,7 +812,7 @@ Retrainer_Name/1082,恶腐之花,Flower of Corruption,悪腐の花,Цветок 
 Retrainer_Name/1083,竹天宝,Bamboo Cub,竹天宝,Бамбуковый детеныш,죽천보
 Retrainer_Name/1084,杀神-西王,God of Slaughter - The West Lord,殺神-西王,Бог резни — Владыка Запада,살신-서왕
 Retrainer_Name/1085,黑猫,Black Cat,黒猫,Черный кот,흑묘
-Retrainer_Name/1086,白猫,White Cat,白猫,Белый кот,하얀 고양이
+Retrainer_Name/1086,白猫,White Cat,白猫,Белый кот,백묘
 Retrainer_Name/1087,饕餮,Taotie,饕餮（とうてつ）,Таоте,도철
 Retrainer_Name/1088,判官-玄冥,Judge - Necroria,判官-玄冥,Судья — Некрория,판관-현명
 Retrainer_Name/1089,剑奴,Sword Slave,縁奴（えんぬ）,Раб меча,검노
@@ -1655,20 +1655,20 @@ IE_Name/3182,清风,Wind of Purity,清風,Ветер чистоты,청풍
 IE_Name/3183,浊脉,Turbid Pulse,濁脈,Мутный пульс,탁맥
 IE_Name/3184,气运庇护,Fortune's Protection,気運庇護,Защита удачи,기운비호
 IE_Name/3185,阴司,Netherworld,陰司,Преисподняя,음사
-IE_Name/3186,好，杀的好啊！,"Yes, a good kill!",痛快な殺しだ！,"Да, славное убийство!","좋소, 아주 잘 죽였소!"
+IE_Name/3186,好，杀的好啊！,"Yes, a good kill!",痛快な殺しだ！,"Да, славное убийство!","좋아, 아주 잘 죽였어!"
 IE_Name/3187,幽冥之息,Breath of Netherworld,幽冥の息,Дыхание преисподней,유명의 숨결
 IE_Name/3188,汲血之齿,Siphoner Fang,汲血の歯,Клык поглотителя,흡혈의 이빨
 IE_Name/3189,幽冥令牌,Netherworld Token,幽冥紋章,Жетон преисподней,유명영패
-IE_Name/3190,饕餮之噬,Taotie's Maw,饕餮（とうてつ）の噬,Пасть Таоте,도철의 씹기
-IE_Name/3191,这是什么？吸一口！,What's this? Lemme take a sip!,何これ？吸おう！,Что это? Дай-ка глотну!,이게 무엇이오? 한 모금만!
-IE_Name/3192,不可以摸摸哦,No fondling allowed!,触っちゃダメよ,Лапать запрещено!,만지면 아니 되오
+IE_Name/3190,饕餮之噬,Taotie's Maw,饕餮（とうてつ）の噬,Пасть Таоте,도철의 포식
+IE_Name/3191,这是什么？吸一口！,What's this? Lemme take a sip!,何これ？吸おう！,Что это? Дай-ка глотну!,이게 뭐냥? 한 모금만!
+IE_Name/3192,不可以摸摸哦,No fondling allowed!,触っちゃダメよ,Лапать запрещено!,쓰담쓰담하면 안 된다냥!
 IE_Name/3193,一笔勾销,Stroke of Erasure,一切破算,Росчерк стирания,일필구소
 IE_Name/3194,生死有录,Destined Fate,生死有録,Предначертанная судьба,생사유록
 IE_Name/3195,契约之奴,Slave by Contract,契約の奴隷,Раб по контракту,계약의 노예
 IE_Name/3196,绘涩,Eros,絵渋（えじゅう）,Эрос,춘화
 IE_Name/3197,哀鸣,Lament,哀鳴,Плач,애명
 IE_Name/3198,悟剑,Sword Revelation,悟剣,Откровение меча,오검
-IE_Name/3199,嘎——嘎！嘎！,Gah—Gah! Gah!,ガ――ガ！ガ！,Га—га! Га!,꽥—꽥! 꽥!
+IE_Name/3199,嘎——嘎！嘎！,Gah—Gah! Gah!,ガ――ガ！ガ！,Га—га! Га!,짹—짹! 짹!
 IE_Name/3200,归去来兮,The Great Returning,いざ帰りなん,Великое возвращение,귀거래사
 IE_Name/3201,妙法葫芦,Mystique Gourd,妙法瓢箪,Таинственная тыква,묘법호로
 IE_Name/3202,驭灵斩,Spiritual Slash,馭霊斬（ぎょれいざん）,Духовный разрез,어령참
@@ -3802,7 +3802,7 @@ Talk/746,呃……也不是不行……想尝尝看……吸溜……,Well... No
 Talk/747,（轻笑）呵……不知死活的小东西，也敢觊觎神明的血肉？,"(Soft chuckles) Hmph... You reckless brat, do you really dare to crave the flesh of a deity?",（静かに笑う）ふふ…身の程知らずね。神の肉に手を出すなんて…,"(Тихо посмеивается) Хмф... Дерзкая девчонка, ты и впрямь смеешь желать плоти божества?",(피식) 허... 죽고 싶은 게로구나. 감히 신명의 혈육을 탐하다니?
 Talk/748,不如……让我尝尝你这身鲜活猫肉的滋味——,How about... let me taste your fresh cat meat instead—,それより…あなたのその新鮮な猫肉を味見させてもらおうかしら？,А давай... я лучше отведаю твоей свежей кошатинки—,차라리... 내가 네 그 싱싱한 고양이 고기 맛을 좀 봐야겠구나—
 Talk/749,要现剖现切的……细细的剁成臊子，不带半点肥腥……（眯眼笑）,"Better sliced and minced right here... into a fine paste, without a trace of grease... (smiling with narrowed eyes)",今ここで切り刻んで…みじん切りにして…脂っこいところは全部取って…（目を細めて笑う）,"Лучше нарезать и измельчить прямо здесь... в тонкую пасту, без единой капли жира... (улыбается, прищурившись)","그 자리에서 배를 가르고 썰어서... 잘게 다져 고기 소로 만들어주마, 비계는 조금도 섞지 않고 말이야... (눈을 가늘게 뜨고 웃음)"
-Talk/750,咪！！？？（惊恐）,Meow!!?? (Terrified),にゃあっ？！（恐怖に震えて）,Мяу!!?? (В ужасе),야옹!!?? (경악)
+Talk/750,咪！！？？（惊恐）,Meow!!?? (Terrified),にゃあっ？！（恐怖に震えて）,Мяу!!?? (В ужасе),냐앗!!?? (경악)
 Talk/751,凡人之心……真是怀念啊……,The heart of a mortal... how nostalgic...,凡人の心…懐かしいわね…,Сердце смертного... как ностальгично...,범인의 마음이라... 참으로 그립구나...
 Talk/752,就是不知道……被封印了这么久，还有几分是凡人呢？,"Though I wonder... after being sealed away for so long, how much of human remains in you?",ただ…こんなに長く封印されていて…まだ「人」の部分は残っているのかしら？,Хотя интересно... после столь долгого заточения много ли в тебе осталось человеческого?,"다만... 그리 오랫동안 봉인되어 있었으니, 범인의 부분이 얼마나 남아있을지 모르겠군?"
 Talk/753,噗通！,Thud!,（どくん！）,Бум!,털썩!
@@ -4106,7 +4106,7 @@ Talk/1050,呜……好耻辱…… 不行……我不能败！,Waaah... The sham
 Talk/1051,（竹天宝艰难起身，拼尽全力无法战胜）,"(Bamboo Cub struggles to her feet, but could not prevail)",（竹天宝は這い上がったが、全力を尽くしても勝てない）,"(Бамбуковый детеныш с трудом встает, но не может одолеть)",(죽천보가 힘겹게 일어나 전력을 다하지만 이길 수 없다)
 Talk/1052,啧啧，这就起不来了？不如让我带回去，好好教导一番呢~,"Tsk tsk, that's it then? How about I take you back for a proper lesson~",あら、もう起き上がれないの？連れて帰って、教えてあげた方がいいかもしれないわね～,"Ц-ц, и это все? Может, забрать тебя на надлежащий урок~","쯧쯧, 벌써 못 일어나는 게냐? 차라리 내가 데려가서, 잘 가르쳐주는 게 좋겠구나~"
 Talk/1053,界主有令，擅闯九幽禁地者，就地正法。,The Lord decrees: any intruder into the Forbidden Nine Abysses shall be executed on the spot.,界主の令…九幽禁地に侵入する者、即刻処断。,"Владыка повелевает: всякий, кто вторгнется в Запретные Девять бездн, будет казнен на месте.",계주의 명이시다. 구유 금지에 무단 침입한 자는 즉결 처형한다.
-Talk/1054,当年的魔君吗，想不到冥界居然还有你这号人物。,The Demon Lord of old? Never thought the Netherworld still harbored someone of your caliber.,昔の魔君？まさか冥界にまだあなたみたいな古株がいたとはね。,"Древний Владыка демонов? Не думала, что Преисподняя все еще хранит кого-то твоего калибра.",옛날의 마군인가. 명계에 너 같은 인물이 남아있을 줄이야.
+Talk/1054,当年的魔君吗，想不到冥界居然还有你这号人物。,The Demon Lord of old? Never thought the Netherworld still harbored someone of your caliber.,昔の魔君？まさか冥界にまだあなたみたいな古株がいたとはね。,"Древний Владыка демонов? Не думала, что Преисподняя все еще хранит кого-то твоего калибра.","옛 마군인가, 명계에 너 같은 인물이 남아있을 줄이야."
 Talk/1055,尸姬，你有违阴阳，不敬鬼神，恶业无数，实为大逆不道，杀无赦！,"Lady Zombie, you violate the balance, defy gods and spirits, and have committed countless evil deeds. Your sacrilege is outrageous, and deserves no mercy!",屍姫…汝は陰陽を覆し、鬼神を敬わず、悪行は数え切れん。反逆の徒は、死すべし！,"Леди-зомби, ты нарушаешь равновесие, попираешь богов и духов и совершила бесчисленные злодеяния. Твое кощунство вопиюще и не заслуживает пощады!","시희, 너는 음양을 어기고 귀신을 공경치 않으며 악업을 쌓았으니, 실로 대역무도하다. 용서 없이 처단하겠다!"
 Talk/1056,没有人可以妨碍我，你大可以动手来试试。,No one can stand in my way. Come at me and try.,誰も私を止められないわ。やってみたら？,"Никто не встанет у меня на пути. Попробуй, нападай.",아무도 나를 방해할 순 없다. 어디 한번 덤벼 보거라.
 Talk/1057,好！杀的好啊！,Yes! Good kills!,いいだろう！殺してやる！,Да! Славные убийства!,좋다! 잘 죽이는구나!
@@ -4116,11 +4116,11 @@ Talk/1060,杀得九百万，最是雄中雄！,He who slaughters nine million is
 Talk/1061,喵——,Meow—,にゃん…！,Мяу—,야옹—
 Talk/1062,唔——喵~,Mmm—Meow~,うぅ…にゃ～…,Мм—Мяу~,으음— 야옹~
 Talk/1063,不速之客……何故在此作乱?,Uninvited one... Why stir trouble here?,招かれざる客よ…何故ここで騒ぎを起こす？,Незваный гость... Зачем ты сеешь здесь смуту?,불청객이여... 어찌하여 이곳에서 난동을 부리는가?
-Talk/1064,呵呵……只是单纯来拜访一下老朋友……,Heh... Just paying an old friend a visit...,ふふ…古い友達に会いに来ただけよ…,Хе... Просто навещаю старого друга...,후후... 그저 옛 친우를 방문했을 뿐이라네...
-Talk/1065,顺便……我觉得这个阴司没什么用了……,By the way... I find this Netherworld rather useless...,ところで…冥界の役所って役に立ってないように思うんだけど…,К слову... Эта Преисподняя кажется мне довольно бесполезной...,겸사겸사... 이 저승 관청도 별 쓸모가 없어진 것 같아서 말이야...
+Talk/1064,呵呵……只是单纯来拜访一下老朋友……,Heh... Just paying an old friend a visit...,ふふ…古い友達に会いに来ただけよ…,Хе... Просто навещаю старого друга...,후후... 그저 옛 친우를 방문했을 뿐이야...
+Talk/1065,顺便……我觉得这个阴司没什么用了……,By the way... I find this Netherworld rather useless...,ところで…冥界の役所って役に立ってないように思うんだけど…,К слову... Эта Преисподняя кажется мне довольно бесполезной...,겸사겸사... 이 명부도 별 쓸모가 없어진 것 같아서 말이야...
 Talk/1066,是时候，并入我的永恒神国了……,It's time to merge it into my eternal realm...,私の永遠の神国に取り込む時がきたわね…,Пора влить ее в мое вечное царство...,이제 나의 영원한 신국에 합병될 때가 되었다...
-Talk/1067,曾经的春神，竟堕落至此！,"The once-venerated Spring Goddess, has fallen so low!",かつての春神が、ここまで堕落するとは！,Некогда почитаемая Весенняя богиня пала так низко!,"한때의 춘신이, 이토록 타락하다니!"
-Talk/1068,孤乃幽冥之主，统御生死，岂容亵渎！,"I, the Sovereign of the Netherworld, ruler over life and death—shall stand no blasphemy!",吾は幽冥の主。生死を司る者。冒涜は許さん！,"Я, Властелин Преисподней, владыка жизни и смерти, не потерплю кощунства!","짐은 유명의 주인이자 생사를 통솔하는 자니, 모독을 용납지 않겠다!"
+Talk/1067,曾经的春神，竟堕落至此！,"The once-venerated Spring Goddess, has fallen so low!",かつての春神が、ここまで堕落するとは！,Некогда почитаемая Весенняя богиня пала так низко!,"한때의 춘신이라는 자가, 이토록 타락하다니!"
+Talk/1068,孤乃幽冥之主，统御生死，岂容亵渎！,"I, the Sovereign of the Netherworld, ruler over life and death—shall stand no blasphemy!",吾は幽冥の主。生死を司る者。冒涜は許さん！,"Я, Властелин Преисподней, владыка жизни и смерти, не потерплю кощунства!","과인은 유명의 주인이자 생사를 통솔하는 자니, 모독을 용납지 않겠다!"
 Talk/1069,哼，冥顽不化……你该休息了，老东西。,"Hmph, stubborn to the end... It's time for you to rest, old fool.",ふん、頑固ね。…そろそろ休んだ方がいいわ、老いぼれ。,"Хмф, упрям до конца... Пора тебе на покой, старый глупец.","흥, 고집불통이군... 이제 쉴 때가 되었다, 늙은이."
 Talk/1070,逆乱生死，当罚！,To defy the order of life and death—punishment awaits!,生死に逆らう者に、罰を！,Бросать вызов порядку жизни и смерти — кара ждет!,"생사를 어지럽힌 죄, 벌을 받아라!"
 Talk/1071,汝等！打入冥狱！,You lot! Be cast into the Abyssal Hell!,汝ら！冥獄へ落とす！,Эй вы! Ввергнуть их в Бездонный ад!,네놈들! 명옥에 처넣어라!
@@ -4365,7 +4365,7 @@ Talk/1309,哈哈哈……真是别有一番风味，小家伙不妨把你的尾�
 Talk/1310,啧……已经不会说话了么……无趣……,Tsk... Can't speak already? What a bore...,ちっ…もう口もきけないとは…退屈ね…,Ц... Уже не можешь говорить? Какая скука...,쯧... 이제 말도 못 하게 됐나... 재미없군...
 Talk/1311,你这玉镇神魂有损，不如，借我增益一番~,"Your Jade Seal holds a broken spirit... Better lend it to me, for some enchanting~",この玉鎮の魂は壊れた。なら、私の力となりなさい～,"В твоей Нефритовой печати — надломленный дух... Лучше одолжи ее мне, для зачарования~","네 옥진은 신혼이 손상되어 있으니, 내게 빌려주어 한 번 강화해 보는 게 어떻겠나~"
 Talk/1312,凡人的躯壳……啧……真是不堪把玩……,Mortals' bodies... Tch... Too fragile to play with...,凡人の殻…ちっ…脆いものね…,"Тела смертных... Тьфу... Слишком хрупкие, чтобы играть...",범인의 육신이란... 쯧... 정말 만지작거릴 맛이 없구나...
-Talk/1313,所谓天地有灵……谁拳头大，这灵便听谁的…,"The cosmic will, you say? Whoever has the biggest fist, the will obeys...",いわゆる天地に霊あり…拳が強い者の言いなりだわ…,"Воля космоса, говоришь? У кого кулак больше, тому воля и повинуется...",이른바 천지에 영이 있다는 것은... 주먹이 센 자가 이 영을 마음대로 부리는 법이지…
+Talk/1313,所谓天地有灵……谁拳头大，这灵便听谁的…,"The cosmic will, you say? Whoever has the biggest fist, the will obeys...",いわゆる天地に霊あり…拳が強い者の言いなりだわ…,"Воля космоса, говоришь? У кого кулак больше, тому воля и повинуется...",이른바 천지에 영이 있다고는 하나... 결국 강자가 이 영을 마음대로 부리는 법이지…
 Talk/1314,本源之阴…恐怕这世上没几个凡人受的住吧…,The primordial Yin essence... I'm afraid few mortals can even harbor it...,本源の陰…この世に耐えられる凡人などさほどおらぬでしょうに…,"Изначальная эссенция Инь... Боюсь, мало кто из смертных способен ее вместить...",본원의 음기란… 세상에 이것을 견딜 수 있는 범인이 얼마나 되겠느냐…
 Talk/1315,元阳之力，真诱人…可惜，对我已经无用了…,"The primordial Yang essence, how enticing... Pity, it is useless to me now...",元陽の力、いいね…残念ながら私には使いようもないわ…,"Изначальная эссенция Ян, как соблазнительно... Жаль, теперь она мне без надобности...","원양의 힘이란, 정말 유혹적이군… 아쉽게도, 이미 내겐 쓸모가 없지만…"
 Talk/1316,尸姬，归来吧……,Return to me... Lady Zombie...,屍姫さま、お帰りください…,Вернись ко мне... Леди-зомби...,"시희여, 돌아오라..."
@@ -4388,7 +4388,7 @@ Talk/1332,历史的幽灵么……真是熟悉,The specter of history... How fam
 Talk/1333,我可是刚刚收藏了一个你的后辈呢~,I've just added one of your juniors to my collection~,あんたの後輩を手に入れたところよ～,Я только что добавила одного из твоих младших в свою коллекцию~,내가 방금 너의 후배 하나를 수집했거든~
 Talk/1334,时光……咳咳……不会忘记您……,Time... cough... will never forget you...,時は…ゴホッ…あなたを忘れませぬ…,Время... кашель... никогда тебя не забудет...,세월은... 쿨럭... 당신을 잊지 않을 것입니다...
 Talk/1335,归来吧……春日的神明……,Return... Oh goddess of spring...,お帰りなさい…春日の神よ…,Вернись... О богиня весны...,돌아오소서... 봄날의 신명이시여...
-Talk/1336,时光……流转……,Time... flows on...,時が…流転する…,Время... течет дальше...,시간이여... 흘러라...
+Talk/1336,时光……流转……,Time... flows on...,時が…流転する…,Время... течет дальше...,세월이여... 흘러라...
 Talk/1337,亡者……归去吧………,The departed... shall rest...,亡き者よ…帰りなさい…,Усопшие... да упокоятся...,"망자는, 돌아가야 하는 법...…"
 Talk/1338,岁月……抚平一切……,Time... will heal all...,歳月は…すべてを癒す…,Время... исцелит все...!,세월이여... 모든 것을 어루만져라...
 Talk/1339,神应当爱着世人……,A goddess shall love mankind...,神は世を愛するべき…,Богиня да возлюбит человечество...,신명이란 자고로 세상 사람들을 사랑해야 하는 법...
@@ -4471,13 +4471,13 @@ Talk/1415,讨厌的东西……给我去死！,Vile pests... Die!,嫌なやつ�
 Talk/1416,睚眦，记住你了！,Yazi has remembered you!,この睚眦、忘れるもんですか！,Яцзы тебя запомнил!,"애자, 기억해 뒀다!"
 Talk/1417,我记住你了，等死吧！,"I've remembered you, your life is forfeit!",その面覚えたわよ！首を洗って待ってなさい！,"Я тебя запомнил, твоя жизнь — расплата!","기억해 뒀다, 각오해라!"
 Talk/1418,咳咳……岁月如春……,Cough... cough... The years flow like spring...,ゴホッ…歳月は春の如し…,"Кашель... кашель... Годы текут, как весна...",콜록콜록... 세월은 봄과 같아...
-Talk/1419,时光，未曾改变……,Time... never changes...,時は、変わらない…,Время... не меняется никогда...,"시간이여, 변한 것이 없구나..."
+Talk/1419,时光，未曾改变……,Time... never changes...,時は、変わらない…,Время... не меняется никогда...,"세월이여, 변한 것이 없구나..."
 Talk/1420,遗忘吧……,Let it fade...,忘れよ…,Пусть угаснет...,잊혀지거라...
 Talk/1421,归于昨日…,Return to yesterday...,往日に帰れ…,Вернись во вчера...,어제로 돌아가거라…
 Talk/1422,嗯……咳咳……,"Mmh... cough, cough...",うん…ゴホッ…,"Ммх... кхе, кхе...",음... 콜록콜록...
 Talk/1423,化为历史的尘埃吧……,Turn into dust of history...,歴史の塵となれ…,Обратись в пыль истории...,역사의 먼지가 되거라...
 Talk/1424,岁月之力，供您指使……,"The power of Time, at your command...",歳月の力、意のままに…,"Сила Времени, к вашим услугам...","세월의 힘이여, 당신의 명에 따르오리다..."
-Talk/1425,时光……在指尖流淌……,Time... slips through fingertips...,時が…指先を流る…,Время... ускользает сквозь пальцы...,시간이여... 손가락 끝으로 흘러라...
+Talk/1425,时光……在指尖流淌……,Time... slips through fingertips...,時が…指先を流る…,Время... ускользает сквозь пальцы...,세월이여... 손가락 끝으로 흘러라...
 Talk/1426,万古春在，青叶长开……,The eternal spring abides evergreen leaves...,万古の春はあり、青葉は長く咲く…,Вечная весна хранит неувядающую листву...,"만고의 봄은 여전하고, 푸른 잎은 길이 피어 있으리..."
 Talk/1427,春回大地……,Spring returns to earth...,大地に春が戻る…,Весна возвращается на землю...,대지에 봄이 돌아오니...
 Talk/1428,汝等，重回轮回……,Back to reincarnation with you...,汝ら、輪廻へ還れ…,Назад в перерождение тебя...,"너희들은, 윤회로 돌아가거라..."
@@ -4728,7 +4728,7 @@ EnemyAction/188,幽冥撕咬,Netherworld Bite,幽冥噛み,Укус преисп
 EnemyAction/189,杀威棒,Will-Breaker Staff,殺威棒,Посох-сломитель воли,살위봉
 EnemyAction/190,饕餮啃食,Taotie's Gnaw,饕餮噛み砕き,Грызня Таоте,도철의 포식
 EnemyAction/191,哈气,Hiss,吐息,Шипение,입김
-EnemyAction/192,挠挠挠挠挠,Scratch Scratch Scratch,掻き掻き掻き,Цап-царап-царап,긁적긁적긁적긁적긁적
+EnemyAction/192,挠挠挠挠挠,Scratch Scratch Scratch,掻き掻き掻き,Цап-царап-царап,냥냥펀치
 EnemyAction/193,判魂,Judgment of Souls,魂裁き,Суд душ,판혼
 EnemyAction/194,震慑,Deterrence,威嚇,Устрашение,진섭
 EnemyAction/195,绘涩,Eros,絵渋（えじゅう）,Эрос,춘화
@@ -4844,15 +4844,15 @@ HIE_Name/10017,等待戈多,Waiting for Godot,ゴドー待ち,В ожидани�
 HIE_Name/10019,京观,Mound of Skulls,京観,Курган черепов,경관
 HIE_Name/20001,临时挑战-独臂老尸,Emergent Challenge - One-Armed Elder,臨時挑戦-片腕翁,Внезапный вызов — Однорукий старец,돌발 도전-독비노시
 HIE_Name/20002,临时挑战-腐蛾,Emergent Challenge - Decay Moth,臨時挑戦-腐蛾,Внезапный вызов — Мотылек гниения,돌발 도전-부아
-HIE_Name/20003,千刀万剐,A Thousand Cuts,千刀万断,Тысяча порезов,천도만과
-HIE_Name/20004,捏人,Modeling,捏ねる,Лепка,사람 빚기
-HIE_Name/20005,炮烙,Searing Punishment,炮烙,Палящая кара,포락
-HIE_Name/20006,沉熏,Smothering,沈熏,Удушение,침훈
-HIE_Name/20007,放血,Bloodletting,放血,Кровопускание,방혈
-HIE_Name/20008,折磨,Torture,拷問,Пытка,고문
-HIE_Name/20009,活剥,Flaying Alive,生き剥ぎ,Сдирание кожи заживо,산채로 가죽 벗기기
-HIE_Name/20010,人格脱出,Excretion of Personality,人格脱出,Вытеснение личности,인격 탈출
-HIE_Name/20011,活埋,Burying Alive,生き埋め,Погребение заживо,생매장
+HIE_Name/20003,千刀万剐,A Thousand Cuts,千刀万断,Тысяча порезов,능지형 (凌遲刑)
+HIE_Name/20004,捏人,Modeling,捏ねる,Лепка,압쇄형 (壓碎刑)
+HIE_Name/20005,炮烙,Searing Punishment,炮烙,Палящая кара,포락형 (炮烙刑)
+HIE_Name/20006,沉熏,Smothering,沈熏,Удушение,침훈형 (沈燻刑)
+HIE_Name/20007,放血,Bloodletting,放血,Кровопускание,방혈형 (放血刑)
+HIE_Name/20008,折磨,Torture,拷問,Пытка,가학형 (加虐刑)
+HIE_Name/20009,活剥,Flaying Alive,生き剥ぎ,Сдирание кожи заживо,박피형 (剝皮刑)
+HIE_Name/20010,人格脱出,Excretion of Personality,人格脱出,Вытеснение личности,인격말살형 (人格抹殺刑)
+HIE_Name/20011,活埋,Burying Alive,生き埋め,Погребение заживо,생매장형 (生埋葬刑)
 HIE_Name/20012,凡人之血,Mortal Blood,凡人の血,Кровь смертных,범인의 피
 HIE_Name/20013,临时挑战-烟灰龙,Emergent Challenge - Ash Dragon,臨時挑戦-煙灰龍,Внезапный вызов — Пепельный дракон,돌발 도전-연회룡
 HIE_Name/20014,临时挑战-桃枝,Emergent Challenge - Peach Branch,臨時挑戦-桃枝,Внезапный вызов — Персиковая ветвь,돌발 도전-도지
@@ -4866,7 +4866,7 @@ HIE_Name/20021,临时挑战-静剑,Emergent Challenge - Still Sword,臨時挑戦
 HIE_Name/20022,临时挑战-昨日睚眦,Emergent Challenge - Yesterday's Yazi,臨時挑戦（りんじちょうせん）-往日睚眦（おうじつがし）,Внезапный вызов — Вчерашний Яцзы,돌발 도전-작일애자
 HIE_Name/20023,临时挑战-蛛王玄玑,Emergent Challenge - Spheria the Spider Lord,臨時挑戦（りんじちょうせん）-蛛王玄璣（じゅおうげんけい）,"Внезапный вызов — Сферия, Паучий повелитель",돌발 도전-주왕현기
 HIE_Name/30001,春雷余音,Echoes of Spring Thunder,春雷の余響,Эхо весеннего грома,춘뢰여음
-HIE_Name/30002,野蛮生长,Wild Growth,野蛮成長,Буйный рост,야만적 성장
+HIE_Name/30002,野蛮生长,Wild Growth,野蛮成長,Буйный рост,야만생장
 HIE_Name/30003,钱能生慧,Wealth Begets Wisdom,金は知恵,Богатство рождает мудрость,전능생혜
 HIE_Name/30007,开眼,Eye Awakening,開眼,Пробуждение ока,개안
 HIE_Name/30009,涅磐,Nirvana,涅槃,Нирвана,열반
@@ -4874,7 +4874,7 @@ HIE_Name/30010,吞噬,Devour,吞噬,Пожирание,포식
 HIE_Name/30011,点化,Transmutation,点化,Трансмутация,점화
 HIE_Name/30012,肃杀之风,Grim Gale,粛殺の風,Зловещий шквал,숙살의 바람
 HIE_Name/30014,春神灵碑,Spring Goddess's Stele,春神霊碑,Стела весенней богини,춘신영비
-HIE_Name/30015,血雾之花,Bloodmist Blossoms,血霧の花,Цветы кровавой мглы,혈무의 꽃
+HIE_Name/30015,血雾之花,Bloodmist Blossoms,血霧の花,Цветы кровавой мглы,혈무지화
 HIE_Name/30018,腐生柳叶,Saprophytic Willow Leaves,腐生柳葉,Сапрофитные листья ивы,부생유엽
 HIE_Info/1,己方单位普攻后，回复一点灵力,Gain 1 Mana after an allied unit performs a Basic Attack,味方ユニットが通常攻撃したあと、霊力を1回復する。,Дает 1 ману после базовой атаки союзного юнита,아군 유닛이 일반 공격 후 영력을 1 회복합니다.
 HIE_Info/2,战斗结束永久成长10点生命（所有己方单位）,All allied units gain 10 HP permanently after a battle,戦闘終了時に永続的に体力が10増加する（すべての味方ユニット）。,После боя все союзные юниты навсегда получают +10 здоровья,전투 종료 시 최대 생명력이 영구적으로 10 증가합니다 (모든 아군 유닛).
@@ -5066,8 +5066,8 @@ HIE_ExInfo/10015,战斗开始时，所有敌人杂兵最大生命值提高25%,"A
 HIE_ExInfo/10016,战斗开始时，所有敌方最大生命值提高200点,"At the start of battle, all enemy units +200 Max HP",戦闘開始時、すべての敵の体力上限が200増加する。,В начале боя все враги +200 к макс. здоровью,"전투 시작 시, 모든 적의 최대 생명력이 200 증가합니다."
 HIE_ExInfo/10017,所有卡牌费用翻倍,Double the Cost of all cards,すべてのカードコストが倍増する。,Удваивает стоимость всех карт,모든 카드 비용 2배
 HIE_ExInfo/10019,战斗开始时，所有杂兵获得3层【防御】,"At the start of battle, all mobs gain 3 stacks of [Defense]",戦闘開始時、すべての雑兵が「防御」を3ストック得る。,В начале боя все мобы получают 3 зар. [Защита],"전투 시작 시, 모든 잡졸이 【방어】 3중첩을 획득합니다."
-HIE_ExInfo/20001,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. 이 악취미는 한 번만 나타납니다.
-HIE_ExInfo/20002,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. 이 악취미는 한 번만 나타납니다.
+HIE_ExInfo/20001,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. \n이 악취미는 한 번만 나타납니다.
+HIE_ExInfo/20002,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. \n이 악취미는 한 번만 나타납니다.
 HIE_ExInfo/20003,战斗胜利后额外获得30碎神玉,"After victory, you get an extra 30 Deity Shards",戦闘勝利後、追加で30砕神玉を獲得する。,После победы вы получаете 30 дополнительных осколков божества,전투 승리 시 쇄신옥 30개 추가 획득
 HIE_ExInfo/20004,战斗胜利后，额外获得45碎神玉,"After victory, you get an extra 45 Deity Shards",戦闘勝利後、追加で45砕神玉を獲得する。,После победы вы получаете 45 дополнительных осколков божества,전투 승리 시 쇄신옥 45개 추가 획득
 HIE_ExInfo/20005,战斗胜利后额外获得30碎神玉,"After victory, you get an extra 30 Deity Shards",戦闘勝利後、追加で30砕神玉を獲得する。,После победы вы получаете 30 дополнительных осколков божества,전투 승리 시 쇄신옥 30개 추가 획득
@@ -5078,17 +5078,17 @@ HIE_ExInfo/20009,战斗胜利后额外选择一次boss奖励,"After victory, you
 HIE_ExInfo/20010,战斗胜利后额外获得45碎神玉,"After victory, you get an extra 45 Deity Shards",戦闘勝利後、追加で45砕神玉を獲得する。,После победы вы получаете 45 дополнительных осколков божества,전투 승리 시 쇄신옥 45개 추가 획득
 HIE_ExInfo/20011,战斗胜利后额外获得45碎神玉,"After victory, you get an extra 45 Deity Shards",戦闘勝利後、追加で45砕神玉を獲得する。,После победы вы получаете 45 дополнительных осколков божества,전투 승리 시 쇄신옥 45개 추가 획득
 HIE_ExInfo/20012,战斗胜利后额外获得35碎神玉,"After victory, you get an extra 35 Deity Shards",戦闘勝利後、追加で35砕神玉を獲得する。,После победы вы получаете 35 дополнительных осколков божества,전투 승리 시 쇄신옥 35개 추가 획득
-HIE_ExInfo/20013,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. 이 악취미는 한 번만 나타납니다.
-HIE_ExInfo/20014,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. 이 악취미는 한 번만 나타납니다.
+HIE_ExInfo/20013,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. \n이 악취미는 한 번만 나타납니다.
+HIE_ExInfo/20014,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. \n이 악취미는 한 번만 나타납니다.
 HIE_ExInfo/20015,最终关卡，无奖励，纯粹的恶趣味～(^з^)-,Pure whimsy for the final stage. Offers no reward ～(^з^)-,最終ステージ、報酬なし、ただの悪趣味~(^з^)-,Чистая прихоть для финального этапа. Награды нет ～(^з^)->,"마지막 관문, 보상 없음, 순전한 악취미~ (^з^)-"
-HIE_ExInfo/20016,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. 이 악취미는 한 번만 나타납니다.
-HIE_ExInfo/20017,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. 이 악취미는 한 번만 나타납니다.
-HIE_ExInfo/20018,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. 이 악취미는 한 번만 나타납니다.
-HIE_ExInfo/20019,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. 이 악취미는 한 번만 나타납니다.
-HIE_ExInfo/20020,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. 이 악취미는 한 번만 나타납니다.
-HIE_ExInfo/20021,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. 이 악취미는 한 번만 나타납니다.
-HIE_ExInfo/20022,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,В этом бою к врагу присоединяется дополнительный босс — Вчерашний Яцзы,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. 이 악취미는 한 번만 나타납니다.
-HIE_ExInfo/20023,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,"В этом бою к врагу присоединяется дополнительный босс — Сферия, Паучий повелитель",처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. 이 악취미는 한 번만 나타납니다.
+HIE_ExInfo/20016,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. \n이 악취미는 한 번만 나타납니다.
+HIE_ExInfo/20017,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. \n이 악취미는 한 번만 나타납니다.
+HIE_ExInfo/20018,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. \n이 악취미는 한 번만 나타납니다.
+HIE_ExInfo/20019,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. \n이 악취미는 한 번만 나타납니다.
+HIE_ExInfo/20020,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. \n이 악취미는 한 번만 나타납니다.
+HIE_ExInfo/20021,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,После победы над ним вы навсегда открываете миньона и получаете награду босса. Этот Болезненный юмор появляется лишь однажды,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. \n이 악취미는 한 번만 나타납니다.
+HIE_ExInfo/20022,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,В этом бою к врагу присоединяется дополнительный босс — Вчерашний Яцзы,처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. \n이 악취미는 한 번만 나타납니다.
+HIE_ExInfo/20023,击败后永久解锁一名随从，并获得boss奖励，该恶趣味仅出现一次,"After defeating it, you permanently unlock a minion and gain a Boss reward. This Sick Humor appears only once",撃破後にミニオン1名を永続的にアンロックし、ボス報酬を獲得する。この悪趣味は1度だけ出現する。,"В этом бою к врагу присоединяется дополнительный босс — Сферия, Паучий повелитель",처치 시 추종자 한 명을 영구 해금하고 보스 보상을 획득합니다. \n이 악취미는 한 번만 나타납니다.
 HIE_ExInfo/30001,ExInfo&该效果重复购买可叠加,ExInfo&Stackable on repeated purchases,ExInfo&この効果は複回購入ストックできる。,ExInfo&Складывается при повторных покупках,ExInfo&이 효과는 중복 구매하여 중첩할 수 있습니다.
 HIE_ExInfo/30002,ExInfo&该效果重复购买可叠加,ExInfo&Stackable on repeated purchases,ExInfo&この効果は複回購入ストックできる。,ExInfo&Складывается при повторных покупках,ExInfo&이 효과는 중복 구매하여 중첩할 수 있습니다.
 HIE_ExInfo/30003,ExInfo&该效果重复购买可叠加（包括上限）,ExInfo&Stackable on repeated purchases (including the upper limit),ExInfo&この効果は複回購入でストックできる（上限を含む）。,ExInfo&Складывается при повторных покупках (включая верхний предел),ExInfo&이 효과는 중복 구매하여 중첩할 수 있습니다 (상한 포함).
@@ -5390,7 +5390,7 @@ UI/最终的恶趣味,最终的恶趣味,Ultimate Macabre Taste,最終悪趣味,
 UI/关闭页面,关闭页面,Close Page,画面を閉じる,Закрыть страницу,화면 닫기
 UI/选择随从 再点击装备 即可完成佩戴,选择随从，再点击装备，即可完成佩戴,"Select a follower, then click Equip to attach",ミニオンを選択してから装備をクリックすると装着できる。,"Выберите спутника, затем нажмите на экипировку, чтобы надеть её.",추종자를 선택하고 장비를 클릭하면 장착이 완료됩니다.
 UI/售出,售出,Sell,売却,Продать,판매
-UI/选此可以将装备炼化为碎神玉,选此可以将装备炼化为碎神玉,Choose this to refine equipment into Fragments of Divine Jade,クリックして装備を砕神玉に変換する,"Выберите, чтобы переплавить снаряжение в Осколки божественного нефрита",선택 시 장비를 연화하여 쇄신옥으로 변환
+UI/选此可以将装备炼化为碎神玉,选此可以将装备炼化为碎神玉,Choose this to refine equipment into Fragments of Divine Jade,クリックして装備を砕神玉に変換する,"Выберите, чтобы переплавить снаряжение в Осколки божественного нефрита",선택한 장비를 연화하여 쇄신옥으로 변환
 UI/卸下装备,卸下装备,Unequip,装備を外す,Снять снаряжение,장비 해제
 UI/ 专属,▲专属▲,▲Exclusive▲,▲専属▲,▲Эксклюзивный▲,▲전용▲
 UI/分支选择,分支选择,Branch Selection,分岐選択,Выбор ветви,분기 선택
@@ -5518,7 +5518,7 @@ UI/生命值,生命值,HP,体力,Усиление щита,생명력
 UI/护盾增幅,护盾增幅,Shield Boost,シールド増幅,`+1% к получаемому щиту за единицу,보호막 증폭
 UI/SheildIncreaseDesc,每点提高1%护盾获得量,’+1% Shield gained per point,1につき1%シールドを増加する,Каждое очко увеличивает получаемый щит на 1%,수치 1당 보호막 획득량 +1%
 UI/异常抗性,异常抗性,Debuff RES,デバフ耐性,Сопротивление негативным эффектам,상태 이상 내성
-UI/ResistantDesc1,每点提高1%异常状态抵抗概率，,"‘+1% Debuff RES per point,",ポイントごとに1%デバフ抵抗確率を増加する,"`+1% к сопр. дебаффам за единицу,",수치 1당 상태 이상 저항 확률 +1%
+UI/ResistantDesc1,每点提高1%异常状态抵抗概率，,"‘+1% Debuff RES per point,",ポイントごとに1%デバフ抵抗確率を増加する,"`+1% к сопр. дебаффам за единицу,",수치 1당 상태 이상 내성 +1%
 UI/ResistantDesc2,异常状态抗性至多100%，每层debuff单独计算,up to 100%. Each stack is calculated individually,デバフ耐性は最大100%まで、デバフはストックごとに個別に計算される,до 100%. Каждый заряд считается отдельно,"상태 이상 내성은 최대 100%이며, 각 디버프 중첩은 개별적으로 계산됩니다."
 UI/ActionCountDesc,消耗行动次数，拖拽以进行普攻,Costs AP. Drag to Basic Attack,行動回数を消費して、ドラッグで通常攻撃する,Тратит ОД. Перетащите для базовой атаки,"행동 횟수를 소모하며, 드래그하여 일반 공격을 합니다"
 UI/该随从将使用卡牌,该随从将使用卡牌,Minion uses the card,このミニオンはカードを使用する,Миньон использует карту,해당 추종자가 카드를 사용합니다.
@@ -5534,7 +5534,7 @@ UI/并眩晕,并眩晕,& Stun,スタンを付与する,& Оглушение,\n& 
 UI/并中毒,并中毒,& poison,毒を付与する,и отравить,\n& 역병 부여
 UI/装备已满,装备已满,Slot Full,装備数が最大に達した,Слот заполнен,장비 가득 참
 UI/NotMoveTip_1,<color=#FF0000>卡牌/随从行动中，无法移动位置</color>,"<color=#FF0000>Card/Minion is acting, cannot move</color>",<color=#FF0000>カード/ミニオンの行動中は位置を移動できない</color>,"<color=#FF0000>Карта/Миньон действует, невозможно переместить</color>","<color=#FF0000>카드/추종자 행동 중, 위치 이동 불가</color>"
-UI/血贷不足,<color=#FF0000>当前生命值不足以支付血贷</color>,<color=#FF0000>Insufficient HP for Blood Loan</color>,<color=#FF0000>現在の体力では血の契りを支払えない</color>,<color=#FF0000>Недостаточно здоровья для Кровавого займа</color>,<color=#FF0000>현재 생명력으로는 혈채를 지불할 수 없습니다</color>
+UI/血贷不足,<color=#FF0000>当前生命值不足以支付血贷</color>,<color=#FF0000>Insufficient HP for Blood Loan</color>,<color=#FF0000>現在の体力では血の契りを支払えない</color>,<color=#FF0000>Недостаточно здоровья для Кровавого займа</color>,<color=#FF0000>현재 생명력으로는 혈채 지불 불가</color>
 UI/AddDesc_01,攻击力/卡牌强度提高,Attack/Card Power +,攻撃力/カード強度が増加する,Атака/Сила карт +,공격력/카드 위력 증가
 UI/卡牌强度+,卡牌强度+,Card Power +,カード強度+,Мощь карты,카드 위력 +
 UI/Confinement,<color=#FF0000>禁锢，无法抽牌</color>,<color=#FF0000>Rooted. Cannot draw cards</color>,<color=#FF0000>金縛り、ドローできない</color>,<color=#FF0000>Укоренён. Нельзя брать карты</color>,"<color=#FF0000>속박 중, 드로우 불가</color>"
