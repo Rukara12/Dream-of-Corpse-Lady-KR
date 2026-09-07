@@ -160,13 +160,17 @@ footer a{color:var(--ink2)}
 </div>
 <script>
 (function(){
+  var REPO='Rukara12/Dream-of-Corpse-Lady-KR', APP='2842800';
   var box=document.getElementById('status'), txt=document.getElementById('stext');
   if(!box) return;
+
   function p(n){ return (n<10?'0':'')+n; }
   function f(d){ return d.getFullYear()+'.'+p(d.getMonth()+1)+'.'+p(d.getDate())+
                         ' '+p(d.getHours())+':'+p(d.getMinutes()); }
-  fetch('status.json?t='+Date.now()).then(function(r){ return r.ok?r.json():null; })
-  .then(function(s){
+  function esc(x){ var d=document.createElement('div'); d.textContent=x||''; return d.innerHTML; }
+  function j(u){ return fetch(u).then(function(r){ return r.ok?r.json():Promise.reject(r.status); }); }
+
+  function render(s){
     if(!s || !s.translation_updated) return;
     var tr=new Date(s.translation_updated);
     var h='번역 <b>'+f(tr)+'</b>';
@@ -193,8 +197,30 @@ footer a{color:var(--ink2)}
       });
       sec.hidden=false;
     }
-  }).catch(function(){});
-  function esc(x){ var d=document.createElement('div'); d.textContent=x||''; return d.innerHTML; }
+  }
+
+  // status.json 이 없으면 브라우저에서 직접 읽을 수 있는 것만으로 요약 줄을 채운다.
+  // (업데이트 이력은 Steam이 교차 출처 요청을 막아 status.json 이 있어야 한다)
+  function live(){
+    var out={updates:[]};
+    var a=j('https://api.github.com/repos/'+REPO+'/commits?path=data&per_page=1')
+      .then(function(c){ if(c&&c[0]) out.translation_updated=c[0].commit.committer.date; })
+      .catch(function(){});
+    var b=j('https://api.steamcmd.net/v1/info/'+APP)
+      .then(function(g){
+        var br=g.data[APP].depots.branches.public;
+        out.game_updated=new Date(parseInt(br.timeupdated,10)*1000).toISOString();
+        out.game_buildid=String(br.buildid||'');
+      }).catch(function(){});
+    return Promise.all([a,b]).then(function(){ return out.translation_updated?out:null; });
+  }
+
+  fetch('status.json?t='+Date.now())
+    .then(function(r){ return r.ok?r.json():null; })
+    .catch(function(){ return null; })
+    .then(function(s){ return s || live(); })
+    .then(render)
+    .catch(function(){});
 })();
 (function(){
   var b=document.getElementById('copybtn'), t=document.getElementById('cmdtext');
