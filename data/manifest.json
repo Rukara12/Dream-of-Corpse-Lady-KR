@@ -211,6 +211,38 @@
           172,
           172
         ]
+      },
+      {
+        "file": "B_frame_水.png",
+        "texture": "水",
+        "size": [
+          512,
+          788
+        ]
+      },
+      {
+        "file": "B_frame_火.png",
+        "texture": "火",
+        "size": [
+          512,
+          788
+        ]
+      },
+      {
+        "file": "B_frame_雷.png",
+        "texture": "雷",
+        "size": [
+          512,
+          788
+        ]
+      },
+      {
+        "file": "B_frame_风.png",
+        "texture": "风",
+        "size": [
+          512,
+          788
+        ]
       }
     ]
   },

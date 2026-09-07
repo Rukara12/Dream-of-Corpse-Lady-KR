@@ -5544,7 +5544,7 @@ UI/ResistantEatValue,抵抗【汲取】×,Resist [Drain] ×,抵抗「吸収」×
 UI/EatValueDefaultTip,【汲取】失败,[Drain] failed,「吸収」失敗,[Осушение] не удалось,【흡수】 실패
 UI/StunTip,<color=#FF0000>眩晕中，无法恢复行动</color>,<color=#FF0000>Stunned. Cannot act</color>,<color=#FF0000>スタン、行動できない</color>,<color=#FF0000>Оглушен. Не может действовать</color>,"<color=#FF0000>기절 중, 행동 횟수 회복 불가</color>"
 UI/CharmTip_1,<color=#FF0000>被魅惑，无法普攻和使用伤害卡牌</color>,<color=#FF0000>Charmed. Cannot perform Basic Attacks or use damage cards</color>,<color=#FF0000>魅惑されている、通常攻撃とダメージカードを使用できない</color>,<color=#FF0000>Очарован. Не может проводить базовые атаки и использовать карты урона</color>,"<color=#FF0000>매혹 상태, 일반 공격 및 피해 카드 사용 불가</color>"
-UI/最终boss,最终boss,Final Boss,ラスボス,Финальный босс,최종 보스
+UI/最终boss,最终boss,Final Boss,ラスボス,Финальный босс,<size=90%>최종 보스</size>
 UI/风,风,Wind,風,Ветер,풍
 UI/火,火,Fire,火,Огонь,화
 UI/水,水,Water,水,Вода,수
