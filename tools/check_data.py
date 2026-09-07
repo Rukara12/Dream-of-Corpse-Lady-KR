@@ -63,6 +63,37 @@ def check_csv(man):
     print('translation.csv  %d줄, 번역 %d줄' % (len(rows) - 1, done))
 
 
+def check_extra(man):
+    cfg = man.get('extra_text')
+    if not cfg:
+        return
+    p = os.path.join(DATA, cfg['file'])
+    raw = open(p, 'rb').read()
+    if raw[:3] != b'\xef\xbb\xbf':
+        bad('%s 에 UTF-8 BOM 이 없습니다.' % cfg['file'])
+    try:
+        text = raw.decode('utf-8-sig')
+    except UnicodeDecodeError as e:
+        bad('%s 가 UTF-8 이 아닙니다 (%s).' % (cfg['file'], e))
+        return
+    rows = list(csv.reader(io.StringIO(text), strict=True))
+    if not rows or rows[0][:3] != ['Where', 'Chinese', 'Korean']:
+        bad('%s 머리글이 Where,Chinese,Korean 이 아닙니다.' % cfg['file'])
+        return
+    done = 0
+    for i, r in enumerate(rows[1:], 2):
+        if len(r) < 3:
+            bad('%s %d번째 줄의 열이 부족합니다.' % (cfg['file'], i)); continue
+        cn, kr = r[1], r[2]
+        if not kr.strip():
+            continue
+        done += 1
+        if cn.count('\n') != kr.count('\n'):
+            bad('%s %d번째 줄: 줄 수가 원문과 다릅니다 (%d vs %d).'
+                % (cfg['file'], i, cn.count('\n') + 1, kr.count('\n') + 1))
+    print('%s  %d줄, 번역 %d줄' % (cfg['file'], len(rows) - 1, done))
+
+
 def check_assets(man):
     font = os.path.join(DATA, man['font']['file'])
     if not os.path.isfile(font) or os.path.getsize(font) < 1_000_000:
@@ -93,6 +124,7 @@ def check_assets(man):
 def main():
     man = json.load(io.open(os.path.join(DATA, 'manifest.json'), encoding='utf-8'))
     check_csv(man)
+    check_extra(man)
     check_assets(man)
     if errs:
         print('\n검사 실패')

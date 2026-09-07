@@ -14,6 +14,7 @@ def main(game, data, out=None):
     steps.step_translate(ctx, cache)
     steps.step_font(ctx, cache)
     steps.step_image(ctx, cache)
+    steps.step_extra(ctx, cache)
     steps.step_code(ctx)
     steps.save_all(ctx, cache)
     print('[%5.1fs] 완료'%(time.time()-t0))

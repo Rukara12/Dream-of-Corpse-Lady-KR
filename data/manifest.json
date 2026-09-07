@@ -251,5 +251,16 @@
         "》\n"
       ]
     ]
+  },
+  "extra_text": {
+    "note": "I2 번역 데이터 밖에 있는 데이터 테이블 문자열. 난이도별 악취미 설명.",
+    "file": "extra_text.csv",
+    "asset": "sharedassets1.assets",
+    "assembly": "Assembly-CSharp",
+    "class": "DifficultDic",
+    "object": "DifficultDic",
+    "field": "ExBadRoge",
+    "min_bytes": 10000,
+    "expect": 37
   }
 }

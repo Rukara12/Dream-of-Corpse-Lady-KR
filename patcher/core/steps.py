@@ -167,11 +167,27 @@ def _reset_glyphs(t):
         t['m_fontInfo']['CharacterCount'] = 0
 
 
+_GEN = {}
+
+
+def generator(game_dir, unity):
+    """게임의 DLL을 한 번만 읽어 타입트리 생성기를 만든다."""
+    key = (game_dir, unity)
+    if key not in _GEN:
+        from UnityPy.helpers.TypeTreeGenerator import TypeTreeGenerator
+        g = TypeTreeGenerator(unity)
+        g.load_local_game(game_dir)
+        _GEN[key] = g
+    return _GEN[key]
+
+
+def class_node(ctx, assembly, cls):
+    return generator(ctx.game, ctx.man['game']['unity']).get_nodes_up(assembly, cls)
+
+
 def tmp_node(game_dir):
-    from UnityPy.helpers.TypeTreeGenerator import TypeTreeGenerator
-    g = TypeTreeGenerator('2022.3.52f1')
-    g.load_local_game(game_dir)
-    return g.get_nodes_up('Unity.TextMeshPro', 'TMPro.TMP_FontAsset')
+    return generator(game_dir, '2022.3.52f1').get_nodes_up(
+        'Unity.TextMeshPro', 'TMPro.TMP_FontAsset')
 
 
 def step_font(ctx, env_cache):
@@ -264,6 +280,68 @@ def step_image(ctx, env_cache):
     env_cache[name] = env
     ctx.log('텍스처 %d장 교체' % done)
     return done
+
+
+# ─────────────────────────────────────────────── 3.5 데이터 테이블 텍스트
+def load_extra(path):
+    """extra_text.csv -> {중국어: 한국어}"""
+    table = {}
+    with io.open(path, encoding='utf-8-sig', newline='') as f:
+        r = csv.reader(f)
+        head = next(r)
+        ci, ki = head.index('Chinese'), head.index('Korean')
+        for row in r:
+            if len(row) > ki and row[ci].strip() and row[ki].strip():
+                table[row[ci]] = row[ki]
+    return table
+
+
+def _swap(v, field, table, key=None, stat=None):
+    if isinstance(v, dict):
+        return {k: _swap(vv, field, table, k, stat) for k, vv in v.items()}
+    if isinstance(v, list):
+        return [_swap(vv, field, table, key, stat) for vv in v]
+    if isinstance(v, str) and key == field and v in table:
+        stat[0] += 1
+        return table[v]
+    return v
+
+
+def step_extra(ctx, env_cache):
+    """I2 밖에 있는 데이터 테이블의 문자열을 바꾼다."""
+    cfg = ctx.man.get('extra_text')
+    if not cfg:
+        return 0
+    table = load_extra(os.path.join(ctx.res, cfg['file']))
+    ctx.log('추가 텍스트 %d개 항목' % len(table))
+
+    node = class_node(ctx, cfg['assembly'], cfg['class'])
+    name = cfg['asset']
+    env = env_cache.get(name) or load_asset(ctx, name)
+    lo = int(cfg.get('min_bytes', 10000))
+    target = None
+    for o in env.objects:
+        if o.type.name != 'MonoBehaviour' or o.byte_size < lo:
+            continue
+        try:
+            t = o.read_typetree(node)
+        except Exception:
+            continue
+        if t.get('m_Name') == cfg['object'] and cfg['field'] in str(t)[:200000]:
+            target = (o, t)
+            break
+    if target is None:
+        raise finder.NotFound('%s 오브젝트를 찾지 못했습니다.' % cfg['object'])
+
+    o, t = target
+    stat = [0]
+    t = _swap(t, cfg['field'], table, None, stat)
+    o.save_typetree(t, node)
+    env_cache[name] = env
+    ctx.log('%s 문자열 %d곳 교체' % (cfg['object'], stat[0]))
+    if cfg.get('expect') and stat[0] < int(cfg['expect']):
+        ctx.log('  (기대 %s곳 중 %d곳 — 게임이 바뀌었을 수 있습니다)' % (cfg['expect'], stat[0]))
+    return stat[0]
 
 
 # ─────────────────────────────────────────────── 4. 코드
