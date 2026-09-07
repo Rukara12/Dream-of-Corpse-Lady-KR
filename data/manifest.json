@@ -163,6 +163,54 @@
           308,
           480
         ]
+      },
+      {
+        "file": "B_Fire.png",
+        "texture": "Fire",
+        "size": [
+          172,
+          172
+        ]
+      },
+      {
+        "file": "B_Thunder.png",
+        "texture": "Thunder",
+        "size": [
+          172,
+          172
+        ]
+      },
+      {
+        "file": "B_Water.png",
+        "texture": "Water",
+        "size": [
+          172,
+          172
+        ]
+      },
+      {
+        "file": "B_Wind.png",
+        "texture": "Wind",
+        "size": [
+          172,
+          172
+        ]
+      },
+      {
+        "file": "B_Yang.png",
+        "texture": "Yang",
+        "size": [
+          172,
+          172
+        ]
+      },
+      {
+        "file": "B_Yin.png",
+        "texture": "Yin",
+        "size": [
+          172,
+          172
+        ]
       }
     ]
   },
