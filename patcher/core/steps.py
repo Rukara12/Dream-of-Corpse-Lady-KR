@@ -254,6 +254,27 @@ def step_font(ctx, env_cache):
 
 
 # ─────────────────────────────────────────────── 3. 이미지
+def pick_objects(objs, entry):
+    """이름이 겹치는 텍스처 중 무엇을 바꿀지 고른다.
+
+    같은 이름·같은 크기의 오브젝트가 여러 개일 때 전부 바꾸면, 한 화면에
+    둘이 함께 그려지는 경우 글자가 겹쳐 보인다. manifest 에서 지정한다.
+      path_id : 이 pathID 가 후보에 있으면 그것만 바꾼다 (게임 갱신 전까지 정확)
+      limit   : pathID 오름차순으로 이 개수만 바꾼다 (갱신 후의 대비책)
+    """
+    if len(objs) <= 1:
+        return objs
+    pid = entry.get('path_id')
+    if pid is not None:
+        exact = [o for o in objs if o.path_id == pid]
+        if exact:
+            return exact
+    limit = entry.get('limit')
+    if limit:
+        return sorted(objs, key=lambda o: o.path_id)[:int(limit)]
+    return objs
+
+
 def step_image(ctx, env_cache):
     noaudio.install()
     import UnityPy
@@ -269,7 +290,9 @@ def step_image(ctx, env_cache):
 
     done = 0
     for tex, objs in hits.items():
-        path = os.path.join(ctx.res, cfg['dir'], by_tex[tex]['file'])
+        e = by_tex[tex]
+        objs = pick_objects(objs, e)
+        path = os.path.join(ctx.res, cfg['dir'], e['file'])
         img = Image.open(path).convert('RGBA')
         for o in objs:
             d = o.read()
@@ -277,6 +300,10 @@ def step_image(ctx, env_cache):
             d.set_image(img, target_format=4, mipmap_count=max(1, d.m_MipCount or 1))
             d.save()
             done += 1
+        if len(hits[tex]) > 1:
+            ctx.log('  %s: 후보 %d개 중 %d개 교체 (pathID %s)'
+                    % (tex, len(hits[tex]), len(objs),
+                       ', '.join(str(o.path_id) for o in objs)))
     env_cache[name] = env
     ctx.log('텍스처 %d장 교체' % done)
     return done

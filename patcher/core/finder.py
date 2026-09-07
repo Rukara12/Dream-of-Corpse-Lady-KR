@@ -113,7 +113,8 @@ def find_textures(env, wanted):
     """wanted: {텍스처 이름: (너비, 높이)} -> {이름: [오브젝트, ...]}
 
     이름이 겹치는 텍스처(win 등)는 해상도까지 맞는 후보를 모두 돌려준다.
-    같은 그림이 두 벌 들어 있는 경우이므로 전부 교체하는 편이 맞다.
+    전부 바꿀지 하나만 바꿀지는 manifest 의 path_id / limit 으로 정한다.
+    같은 화면에 두 오브젝트가 함께 그려지는 경우가 있어 전부 바꾸면 겹쳐 보인다.
     """
     hits = {k: [] for k in wanted}
     for o in env.objects:
