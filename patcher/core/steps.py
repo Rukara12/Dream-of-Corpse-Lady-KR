@@ -7,7 +7,7 @@
 """
 import csv, hashlib, io, json, os, shutil, time
 
-from . import fastwrite, finder, i2, ilpatch, noaudio
+from . import fastwrite, finder, i2, ilpatch, noaudio, uspatch
 
 BACKUP_DIR = '한글패치_원본백업'
 DLL_REL    = os.path.join('Managed', 'Assembly-CSharp.dll')
@@ -271,10 +271,20 @@ def step_code(ctx):
     cfg = ctx.man['code_patch']
     raw = open(src_path(ctx, 'Assembly-CSharp.dll'), 'rb').read()
     out, n, msg = ilpatch.apply(raw, cfg['expect_sites'])
+    ctx.log('코드 패치: %s' % msg)
+
+    nb = ctx.man.get('name_brackets')
+    if nb:
+        out, done = uspatch.apply(out, [tuple(x) for x in nb['replace']])
+        missing = [k for k in nb.get('required', []) if k not in done]
+        if missing:
+            raise finder.NotFound('이름 괄호 리터럴을 찾지 못했습니다: %s' % missing)
+        ctx.log('이름 괄호 %d종 교체 (%s)'
+                % (len(done), ' '.join(sorted(done))))
+
     dst = os.path.join(ctx.out, DLL_REL)
     with open(dst, 'wb') as f:
         f.write(out)
-    ctx.log('코드 패치: %s' % msg)
     return n
 
 
