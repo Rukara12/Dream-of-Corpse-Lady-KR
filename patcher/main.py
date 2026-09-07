@@ -193,6 +193,7 @@ class App:
                 (55, '폰트 적용',       lambda: steps.step_font(ctx, cache)),
                 (65, '이미지 적용',     lambda: steps.step_image(ctx, cache)),
                 (68, '추가 텍스트 적용', lambda: steps.step_extra(ctx, cache)),
+                (69, '태그 표기 수정',  lambda: steps.step_rich(ctx, cache)),
                 (70, '표기 순서 수정',  lambda: steps.step_code(ctx)),
                 (98, '게임에 저장',     lambda: steps.save_all(ctx, cache)),
             ):

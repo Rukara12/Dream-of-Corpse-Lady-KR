@@ -297,5 +297,22 @@
     "field": "ExBadRoge",
     "min_bytes": 10000,
     "expect": 37
+  },
+  "assets_extra": [
+    "level1",
+    "globalgamemanagers.assets"
+  ],
+  "rich_text": {
+    "note": "<size=90%> 같은 태그가 글자 그대로 보이는 라벨. m_isRichText 가 0 이라 태그를 해석하지 않는다.",
+    "script_asset": "globalgamemanagers.assets",
+    "targets": [
+      {
+        "asset": "level1",
+        "assembly": "Assembly-CSharp",
+        "class": "UI_Ani",
+        "field": "Name",
+        "note": "스테이지 진입 로딩 화면의 관문 이름. StageName/* 을 여기와 스테이지 선택 카드 두 곳에서 쓴다."
+      }
+    ]
   }
 }

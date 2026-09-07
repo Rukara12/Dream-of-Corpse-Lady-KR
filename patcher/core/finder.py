@@ -128,3 +128,45 @@ def find_textures(env, wanted):
     if missing:
         raise NotFound('텍스처를 찾지 못했습니다: ' + ', '.join(missing))
     return hits
+
+
+# ─────────────────────────────────────────────── MonoScript / 컴포넌트
+def read_head(obj, n=32):
+    """MonoBehaviour 앞부분만 읽는다. PPtr만 볼 때 전체를 읽지 않는다."""
+    obj.reset()
+    rd = obj.reader
+    rd.stream.seek(rd.Position)
+    return rd.stream.read(min(n, obj.byte_size))
+
+
+def script_ids(env):
+    """MonoScript 클래스명 -> pathID. 같은 이름이 여럿이면 먼저 나온 것."""
+    out = {}
+    for o in env.objects:
+        if o.type.name != 'MonoScript':
+            continue
+        try:
+            t = o.read_typetree()
+        except Exception:
+            continue
+        out.setdefault(t.get('m_ClassName', ''), o.path_id)
+    return out
+
+
+def mono_by_script(env, script_pid):
+    """m_Script가 주어진 MonoScript를 가리키는 MonoBehaviour들.
+
+    타입트리 없이 원시 바이트에서 PPtr만 읽는다. MonoBehaviour 앞부분은
+    m_GameObject(12) + m_Enabled(4) + m_Script(12) 로 고정이라 안전하다.
+    """
+    import struct
+    out = []
+    for o in env.objects:
+        if o.type.name != 'MonoBehaviour' or o.byte_size < 28:
+            continue
+        raw = read_head(o, 28)
+        if len(raw) < 28:
+            continue
+        if struct.unpack_from('<q', raw, 20)[0] == script_pid:
+            out.append(o)
+    return out

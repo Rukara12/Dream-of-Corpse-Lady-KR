@@ -33,7 +33,7 @@ class Ctx:
 # ─────────────────────────────────────────────── 백업
 def ensure_backup(ctx):
     os.makedirs(ctx.backup, exist_ok=True)
-    files = list(ctx.man['assets']) + [DLL_REL]
+    files = list(ctx.man['assets']) + list(ctx.man.get('assets_extra') or []) + [DLL_REL]
     made = 0
     for rel in files:
         dst = os.path.join(ctx.backup, os.path.basename(rel))
@@ -369,6 +369,68 @@ def step_extra(ctx, env_cache):
     if cfg.get('expect') and stat[0] < int(cfg['expect']):
         ctx.log('  (기대 %s곳 중 %d곳 — 게임이 바뀌었을 수 있습니다)' % (cfg['expect'], stat[0]))
     return stat[0]
+
+
+# ─────────────────────────────────────────────── 3.7 리치 텍스트
+def step_rich(ctx, env_cache):
+    """리치 텍스트가 꺼진 라벨을 켠다.
+
+    같은 번역문이 두 군데에 쓰이는데 한쪽에서만 <size=90%> 같은 태그가
+    글자 그대로 보이는 경우가 있다. 그 라벨은 m_isRichText 가 0 이라
+    태그를 해석하지 않기 때문이다. 대상은 pathID 가 아니라
+    "어떤 스크립트의 어떤 필드가 가리키는 라벨" 로 찾는다.
+    """
+    cfg = ctx.man.get('rich_text')
+    if not cfg:
+        return 0
+    targets = cfg.get('targets') or []
+    if not targets:
+        return 0
+
+    ggm = cfg.get('script_asset', 'globalgamemanagers.assets')
+    scripts = finder.script_ids(env_cache.get(ggm) or load_asset(ctx, ggm))
+    tmp = class_node(ctx, 'Unity.TextMeshPro', 'TMPro.TextMeshProUGUI')
+
+    done = 0
+    for e in targets:
+        spid = scripts.get(e['class'])
+        if spid is None:
+            raise finder.NotFound('%s 스크립트를 찾지 못했습니다.' % e['class'])
+        name = e['asset']
+        env = env_cache.get(name) or load_asset(ctx, name)
+        node = class_node(ctx, e.get('assembly', 'Assembly-CSharp'), e['class'])
+
+        want = set()
+        for o in finder.mono_by_script(env, spid):
+            try:
+                t = o.read_typetree(node)
+            except Exception:
+                continue
+            ref = t.get(e['field']) or {}
+            if ref.get('m_FileID') == 0 and ref.get('m_PathID'):
+                want.add(ref['m_PathID'])
+        if not want:
+            raise finder.NotFound('%s.%s 가 가리키는 라벨을 찾지 못했습니다.'
+                                  % (e['class'], e['field']))
+
+        hit = 0
+        for o in env.objects:
+            if o.type.name != 'MonoBehaviour' or o.path_id not in want:
+                continue
+            t = o.read_typetree(tmp)
+            if t.get('m_isRichText') != 1:
+                t['m_isRichText'] = 1
+                o.save_typetree(t, tmp)
+                done += 1
+            hit += 1
+        if hit != len(want):
+            raise finder.NotFound('%s.%s 라벨 %d개 중 %d개만 읽혔습니다.'
+                                  % (e['class'], e['field'], len(want), hit))
+        env_cache[name] = env
+        ctx.log('  %s.%s — 라벨 %d개' % (e['class'], e['field'], hit))
+
+    ctx.log('리치 텍스트 %d곳 켜기' % done)
+    return done
 
 
 # ─────────────────────────────────────────────── 4. 코드
