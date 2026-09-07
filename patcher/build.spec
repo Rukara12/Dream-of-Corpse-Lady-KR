@@ -25,7 +25,8 @@ a = Analysis(
     binaries=binaries,
     datas=datas,
     hiddenimports=hidden,
-    excludes=['matplotlib', 'numpy.f2py', 'pytest'],
+    # 오디오 변환은 쓰지 않는다. FMOD 네이티브 DLL을 넣지 않기 위해 제외한다.
+    excludes=['matplotlib', 'numpy.f2py', 'pytest', 'fmod_toolkit', 'pyfmodex'],
     noarchive=False,
 )
 pyz = PYZ(a.pure)

@@ -7,7 +7,7 @@
 """
 import csv, hashlib, io, json, os, shutil, time
 
-from . import fastwrite, finder, ilpatch, i2
+from . import fastwrite, finder, i2, ilpatch, noaudio
 
 BACKUP_DIR = '한글패치_원본백업'
 DLL_REL    = os.path.join('Managed', 'Assembly-CSharp.dll')
@@ -239,6 +239,7 @@ def step_font(ctx, env_cache):
 
 # ─────────────────────────────────────────────── 3. 이미지
 def step_image(ctx, env_cache):
+    noaudio.install()
     import UnityPy
     from PIL import Image
     cfg = ctx.man['images']
