@@ -342,9 +342,9 @@ Card_Info/20020,"发出贯彻神魂的嚎叫，获得<Demage>【杀意】,同时
 Card_Info/21,造成<Demage>并【标记】目标,Deal <Demage> and [Mark] the target,<Demage>ダメージを与え、ターゲットを「マーク」する。,Наносит <color=#6196FE>【<Demage> ед. урона картой】</color> и [Помечает] цель.,<Demage>의 피해를 입히고 대상에게 【표식】을 남깁니다.
 Card_Info/10021,造成<Demage>并【标记】目标,Deal <Demage> and [Mark] the target,<Demage>ダメージを与え、ターゲットを「マーク」する。,Наносит <color=#6196FE>【<Demage> ед. урона картой】</color> и [Помечает] цель.,<Demage>의 피해를 입히고 대상에게 【표식】을 남깁니다.
 Card_Info/20021,造成<Demage>并【标记】目标，本场战斗【咒之舌】汲取攻击力+1,Deal <Demage> and [Mark] the target. [Curse Tongue] drains +1 more Attack for this battle,<Demage>ダメージを与え、ターゲットを「マーク」する。この戦闘では「呪いの舌」が吸収する攻撃力+1。,Наносит <Demage> и [Помечает] цель.,<Demage>의 피해를 입히고 대상에게 【표식】을 남깁니다. 이번 전투 동안 【주설】이 공격력을 +1 흡수합니다.
-Card_Info/22,唤醒巨盾中残存的神力，使目标获得<#BuffCount_1#>【嘲讽】和<Demage>点护盾,"Awaken the divine power that remains within the shield, granting the target <#BuffCount_1#> [Taunt] and <Demage> points of Shield",巨大な盾に残されし神力を呼び起こし、ターゲットに<#BuffCount_1#>「挑発」と<Demage>シールドを付与する。,"Пробуждает божественную силу, оставшуюся в щите, давая цели <#BuffCount_1#> [Провокация] и <Demage> щита.","거대한 방패에 남아있는 신력을 깨워 대상이 【도발】을 <#BuffCount_1#>중첩만큼 획득하고, <Demage>의 보호막을 획득하게 합니다."
-Card_Info/10022,唤醒巨盾中残存的神力，使目标获得<#BuffCount_1#>【嘲讽】和<Demage>【雷反】,"Awaken the divine power that remains within the shield, granting the target <#BuffCount_1#> [Taunt] and <Demage> [Lightning Counter]",巨大な盾に残されし神力を呼び起こし、ターゲットに<#BuffCount_1#>「挑発」と<Demage>「雷返し」を付与する。,"Пробуждает божественную силу, оставшуюся в щите, давая цели <#BuffCount_1#> [Провокация] и <Demage> [Молниевый контрудар].","거대한 방패에 남아있는 신력을 깨워 대상이 【도발】을 <#BuffCount_1#>중첩만큼 획득하고, <Demage>의 【뇌반】을 획득하게 합니다."
-Card_Info/20022,唤醒巨盾中残存的神力，使目标获得<#BuffCount_1#>【嘲讽】和<Demage>点护盾,"Awaken the divine power that remains within the shield, granting the target <#BuffCount_1#> [Taunt] and <Demage> points of Shield",巨大な盾に残されし神力を呼び起こし、ターゲットに<#BuffCount_1#>「挑発」と<Demage>シールドを付与する。,"Пробуждает божественную силу, оставшуюся в щите, давая цели <#BuffCount_1#> [Провокация] и <Demage> щита.","거대한 방패에 남아있는 신력을 깨워 대상이 【도발】을 <#BuffCount_1#>중첩만큼 획득하고, <Demage>의 보호막을 획득하게 합니다."
+Card_Info/22,唤醒巨盾中残存的神力，使目标获得<#BuffCount_1#>【嘲讽】和<Demage>点护盾,"Awaken the divine power that remains within the shield, granting the target <#BuffCount_1#> [Taunt] and <Demage> points of Shield",巨大な盾に残されし神力を呼び起こし、ターゲットに<#BuffCount_1#>「挑発」と<Demage>シールドを付与する。,"Пробуждает божественную силу, оставшуюся в щите, давая цели <#BuffCount_1#> [Провокация] и <Demage> щита.","거대한 방패에 남아있는 신력을 깨워 대상이 【도발】을 <#BuffCount_1#>만큼 획득하고, <Demage>의 보호막을 획득하게 합니다."
+Card_Info/10022,唤醒巨盾中残存的神力，使目标获得<#BuffCount_1#>【嘲讽】和<Demage>【雷反】,"Awaken the divine power that remains within the shield, granting the target <#BuffCount_1#> [Taunt] and <Demage> [Lightning Counter]",巨大な盾に残されし神力を呼び起こし、ターゲットに<#BuffCount_1#>「挑発」と<Demage>「雷返し」を付与する。,"Пробуждает божественную силу, оставшуюся в щите, давая цели <#BuffCount_1#> [Провокация] и <Demage> [Молниевый контрудар].","거대한 방패에 남아있는 신력을 깨워 대상이 【도발】을 <#BuffCount_1#>만큼 획득하고, <Demage>의 【뇌반】을 획득하게 합니다."
+Card_Info/20022,唤醒巨盾中残存的神力，使目标获得<#BuffCount_1#>【嘲讽】和<Demage>点护盾,"Awaken the divine power that remains within the shield, granting the target <#BuffCount_1#> [Taunt] and <Demage> points of Shield",巨大な盾に残されし神力を呼び起こし、ターゲットに<#BuffCount_1#>「挑発」と<Demage>シールドを付与する。,"Пробуждает божественную силу, оставшуюся в щите, давая цели <#BuffCount_1#> [Провокация] и <Demage> щита.","거대한 방패에 남아있는 신력을 깨워 대상이 【도발】을 <#BuffCount_1#>만큼 획득하고, <Demage>의 보호막을 획득하게 합니다."
 Card_Info/23,算准时机，举盾，弹开攻击。使指定目标获得<Demage>【抵抗】,"Time the move, raise the shield, and deflect the attack. Grant the target <Demage> [Resistance]",タイミングを図って盾を構え、攻撃を弾く。ターゲットに<Demage>「抵抗」を付与する。,"Точно ловит момент, поднимает щит и отражает атаку. Дает цели <Demage> [Сопротивление].",정확한 타이밍에 방패를 들어 공격을 쳐냅니다. 지정된 대상이 <Demage>의 【저항】을 획득하게 합니다.
 Card_Info/10023,算准时机，举盾，弹开攻击。使指定目标获得<Demage>【抵抗】和该层数2倍的【雷反】,"Time the move, raise the shield, and deflect the attack. Grant the target <Demage> stacks of [Resistance] and 2x that amount of [Lightning Counter]",タイミングを図って盾を構え、攻撃を弾く。ターゲットに<Demage>「抵抗」とそのストック2倍の「雷返し」を付与する。,"Точно ловит момент, поднимает щит и отражает атаку. Дает цели <Demage> [Сопротивление] и вдвое больше [Молниевый контрудар].",정확한 타이밍에 방패를 들어 공격을 쳐냅니다. 지정된 대상이 <Demage>의 【저항】과 해당 중첩의 2배에 해당하는 【뇌반】을 획득하게 합니다.
 Card_Info/20023,算准时机，举盾，弹开攻击。使指定目标获得<Demage>【抵抗】,"Time the move, raise the shield, and deflect the attack. Grant the target <Demage> [Resistance]",タイミングを図って盾を構え、攻撃を弾く。ターゲットに<Demage>「抵抗」を付与する。,"Точно ловит момент, поднимает щит и отражает атаку. Дает цели <Demage> [Сопротивление].",정확한 타이밍에 방패를 들어 공격을 쳐냅니다. 지정된 대상이 <Demage>의 【저항】을 획득하게 합니다.
@@ -5352,9 +5352,9 @@ UI/多动,多动,Hyperactivity,行動,Гиперактивность,연격
 UI/疫毒,疫毒,Plague Toxin,疫毒,Чумной яд,역병
 UI/卡牌,卡牌,Card,カード,Карта,카드
 UI/防御,防御,Defense,防御,Защита,방어
-UI/真伤,真伤,True Demage,真実ダメージ,Чистый урон,고정 피해
+UI/真伤,真伤,True Demage,真実ダメージ,Чистый урон,고정
 UI/追伤,追伤,Chase Demage,追加ダメージ,Добивающий урон,추타
-UI/护盾,护盾,Shield,シールド,Щит,보호막
+UI/护盾,护盾,Shield,シールド,Щит,보호
 UI/抵抗,抵抗,Resistance,抵抗,Сопротивление,저항
 UI/嘲讽,嘲讽,Taunt,挑発,Провокация,도발
 UI/标记,标记,Mark,マーク,Метка,표식
@@ -5575,8 +5575,8 @@ UI/BlockTip_-2,通关任意深渊幻想后解锁,Clear any Abyssal Fantasy to un
 UI/BlockTip_6,通关难度5后解锁,Clear Difficulty 5 to unlock,難易度5をクリアすると解放,"Пройдите сложность 5, чтобы открыть",난이도 5 클리어 후 해금
 UI/BlockTip_7,通关神明的三尸-华饰后解锁,Clear Deity's Three Egos - Attire to unlock,神明の三屍-華飾をクリアすると解放,"Пройдите «Три эго божества — Наряд», чтобы открыть",신명의 삼시-화식\n클리어 후 해금
 UI/BlockTip_8,通关神明的三尸-滋味后解锁,Clear Deity's Three Egos - Savor to unlock,神明の三屍-滋味をクリアすると解放,"	Пройдите «Три эго божества — Вкус», чтобы открыть",신명의 삼시-자미\n클리어 후 해금
-UI/StageTip_-1,15关随机敌人，无限难度累加,15 random stages & infinite difficulty scaling,15ステージのランダム敵。難易度は無限に上がっていく,15 случайных этапов и бесконечный рост сложности,"15관 무작위 적, 무한 난이도 누적"
-UI/StageTip_-2,长度30关的boss连战！所有boss将悉数登场……,A 30-stage Boss Rush! All bosses await your challenge...,30ステージのボス連戦！すべてのボスが登場する…,30 этапов босс-раша! Все боссы ждут твоего вызова...,총 30개 관문의 보스 연전! 모든 보스가 총출동합니다...
+UI/StageTip_-1,15关随机敌人，无限难度累加,15 random stages & infinite difficulty scaling,15ステージのランダム敵。難易度は無限に上がっていく,15 случайных этапов и бесконечный рост сложности,"총 15개 관문의 무작위 적\n난이도는 무한으로 누적됩니다."
+UI/StageTip_-2,长度30关的boss连战！所有boss将悉数登场……,A 30-stage Boss Rush! All bosses await your challenge...,30ステージのボス連戦！すべてのボスが登場する…,30 этапов босс-раша! Все боссы ждут твоего вызова...,총 30개 관문의 보스 연전!\n모든 보스가 총출동합니다...
 UI/StageTip_6,茕茕白兔，东走西顾。衣不如新，人不如故。,"Clothes are best when new, But old friends are most true.",独りぼっちの白兎は、東へ駆けては西を振り返る。服は新しいものが良くても、人は昔からの馴染みのほうがいい。,"Одежда хороша новая, а друзья — старые.","외로이 서 있는 흰 토끼,\n동쪽으로 달리다 서쪽을 돌아보네.\n옷은 새것만 못하고,\n사람은 옛 사람만 못하다네."
 UI/StageTip_7,世间众生，不过是我的盘中食粮罢了……,All lives are nothing but food on my platter...,世の衆生など、所詮は私の糧に過ぎないわ……,Все жизни — лишь яства на моем блюде...,"세간의 중생이란,\n내 밥상 위의 먹잇감에 불과할 뿐이지..."
 UI/StageTip_8,这些欲念，才是永恒中仅存的欢愉……,These desires are the only joy left in eternity...,これらの欲望こそ、永遠の中に残された唯一の歓び……,"Эти желания — единственная радость, что осталась в вечности...","이 욕념들이야말로,\n영원 속에 남겨진 유일한 쾌락인 것을..."
