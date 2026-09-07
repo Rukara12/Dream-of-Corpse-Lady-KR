@@ -51,6 +51,18 @@ code{font-family:"IBM Plex Mono",monospace;font-size:.86em;background:var(--surf
 .status.stale .dot{background:var(--gold)}
 .status b{color:var(--ink);font-weight:600}
 .status .sep{color:var(--ink3)}
+ul.hist{margin:0;padding:0;list-style:none;display:flex;flex-direction:column}
+ul.hist li{display:flex;align-items:baseline;gap:14px;padding:14px 0;
+  border-top:1px solid var(--line)}
+ul.hist li:first-child{border-top:0}
+ul.hist .d{flex:0 0 auto;font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink3)}
+ul.hist .t{flex:1 1 auto;font-size:15px;color:var(--ink2)}
+ul.hist .t a{color:var(--ink2);text-decoration:none}
+ul.hist .t a:hover{color:var(--jade)}
+ul.hist .b{flex:0 0 auto;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;
+  font-family:"Gothic A1",sans-serif;border:1px solid transparent}
+ul.hist .b.yes{color:var(--jade);border-color:rgba(75,184,159,.4);background:rgba(75,184,159,.10)}
+ul.hist .b.no{color:var(--gold);border-color:rgba(214,172,87,.4);background:rgba(214,172,87,.10)}
 
 section{padding:52px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:18px}
 section:last-of-type{border-bottom:0}
@@ -120,6 +132,12 @@ footer a{color:var(--ink2)}
     <p class="meta">Win + X → 터미널 → 붙여넣기 → Enter</p>
   </section>
 
+  <section id="history" hidden>
+    <span class="eyebrow">게임 업데이트</span>
+    <h2>번역 반영 현황</h2>
+    <ul class="hist" id="histlist"></ul>
+  </section>
+
   <section>
     <span class="eyebrow">업데이트 후</span>
     <h2>패처를 다시 실행</h2>
@@ -160,7 +178,23 @@ footer a{color:var(--ink2)}
     }
     txt.innerHTML=h;
     box.hidden=false;
+
+    var sec=document.getElementById('history'), list=document.getElementById('histlist');
+    if(sec && list && s.updates && s.updates.length){
+      list.innerHTML='';
+      s.updates.forEach(function(u){
+        var d=new Date(u.date), ok=tr>=d;
+        var li=document.createElement('li');
+        var t=u.url ? '<a href="'+u.url+'" rel="noopener">'+esc(u.title)+'</a>' : esc(u.title);
+        li.innerHTML='<span class="d">'+f(d)+'</span>'+
+                     '<span class="t">'+t+'</span>'+
+                     '<span class="b '+(ok?'yes':'no')+'">'+(ok?'반영':'미반영')+'</span>';
+        list.appendChild(li);
+      });
+      sec.hidden=false;
+    }
   }).catch(function(){});
+  function esc(x){ var d=document.createElement('div'); d.textContent=x||''; return d.innerHTML; }
 })();
 (function(){
   var b=document.getElementById('copybtn'), t=document.getElementById('cmdtext');

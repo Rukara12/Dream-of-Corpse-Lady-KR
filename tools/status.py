@@ -8,6 +8,9 @@ import datetime, json, os, subprocess, sys, urllib.request
 
 APP  = '2842800'
 INFO = 'https://api.steamcmd.net/v1/info/%s' % APP
+NEWS = ('https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/'
+        '?appid=%s&count=40&maxlength=1&format=json' % APP)
+KEEP = 5
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT  = os.path.join(ROOT, 'docs', 'status.json')
 
@@ -25,6 +28,25 @@ def game():
     return iso(b['timeupdated']), str(b.get('buildid') or '')
 
 
+def updates():
+    """patchnotes 태그가 붙은 Steam 공지 최근 KEEP개."""
+    req = urllib.request.Request(NEWS, headers={'User-Agent': 'DreamOfCorpseLady-KR'})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        j = json.load(r)
+    out = []
+    for it in j.get('appnews', {}).get('newsitems', []):
+        if 'patchnotes' not in (it.get('tags') or []):
+            continue
+        out.append({
+            'title': (it.get('title') or '').strip(),
+            'date':  iso(it.get('date')),
+            'url':   it.get('url') or '',
+        })
+        if len(out) >= KEEP:
+            break
+    return out
+
+
 def translation():
     out = subprocess.check_output(
         ['git', 'log', '-1', '--format=%cI', '--', 'data'], cwd=ROOT)
@@ -37,12 +59,17 @@ def main():
         'translation_updated': translation(),
         'game_updated': None,
         'game_buildid': None,
+        'updates': [],
         'checked': iso(datetime.datetime.now(datetime.timezone.utc).timestamp()),
     }
     try:
         data['game_updated'], data['game_buildid'] = game()
     except Exception as e:
-        print('게임 정보 조회 실패: %s' % e, file=sys.stderr)
+        print('게임 빌드 조회 실패: %s' % e, file=sys.stderr)
+    try:
+        data['updates'] = updates()
+    except Exception as e:
+        print('업데이트 이력 조회 실패: %s' % e, file=sys.stderr)
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, 'w', encoding='utf-8') as f:
