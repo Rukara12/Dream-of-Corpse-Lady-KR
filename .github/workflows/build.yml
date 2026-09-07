@@ -29,6 +29,15 @@ jobs:
           pip install -r patcher/requirements.txt pyinstaller
       - name: 패처 빌드
         run: pyinstaller --noconfirm patcher/build.spec
+      - name: 가속 모듈 포함 확인
+        shell: pwsh
+        run: |
+          $f = Get-ChildItem dist\*.exe | Select-Object -First 1
+          $txt = [Text.Encoding]::ASCII.GetString([IO.File]::ReadAllBytes($f.FullName))
+          foreach ($m in 'UnityPyBoost','TypeTreeGeneratorAPI') {
+            if ($txt -notmatch $m) { throw "$m 이(가) exe 에 포함되지 않았습니다" }
+            Write-Host "$m 포함 확인"
+          }
       - name: 산출물 업로드
         uses: actions/upload-artifact@v4
         with:

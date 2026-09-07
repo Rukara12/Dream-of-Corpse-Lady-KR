@@ -61,6 +61,17 @@ def src_path(ctx, name):
     return os.path.join(ctx.backup, os.path.basename(name))
 
 
+def accel_check(ctx):
+    """네이티브 가속 모듈이 실제로 실려 있는지 확인해 로그에 남긴다."""
+    try:
+        from UnityPy.helpers import TypeTreeHelper as T
+        ok = T.read_typetree_boost is not None
+    except Exception:
+        ok = False
+    ctx.log('가속 모듈 %s' % ('사용' if ok else '없음 — 매우 느려집니다'))
+    return ok
+
+
 def load_asset(ctx, name):
     """애셋 파일을 UnityPy에 넘기기 전에 한 번 통째로 훑는다.
 

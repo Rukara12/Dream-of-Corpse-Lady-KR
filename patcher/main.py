@@ -190,6 +190,7 @@ class App:
         try:
             self.flog.write('대상 %r' % game)
             ctx = steps.Ctx(game, resource_dir(), on_log=self.emit)
+            steps.accel_check(ctx)
             cache = {}
             for pct, msg, fn in (
                 ( 5, '원본 백업 확인',   lambda: steps.ensure_backup(ctx)),
