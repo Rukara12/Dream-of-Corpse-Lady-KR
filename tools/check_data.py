@@ -6,6 +6,16 @@ translation.csv 를 사람이 직접 고치다 깨뜨리는 경우를 잡는다.
 """
 import csv, io, json, os, sys
 
+import sys
+
+# 윈도우 러너의 표준 출력이 cp1252 라서 한글을 못 찍고 죽는다.
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, 'data')
 HEAD = ['Term_Key', 'Language_0 (CN)', 'Language_1 (EN)',

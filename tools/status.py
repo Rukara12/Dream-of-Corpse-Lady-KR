@@ -6,6 +6,16 @@
 """
 import datetime, json, os, subprocess, sys, urllib.request
 
+import sys
+
+# 윈도우 러너의 표준 출력이 cp1252 라서 한글을 못 찍고 죽는다.
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
+
 APP  = '2842800'
 INFO = 'https://api.steamcmd.net/v1/info/%s' % APP
 NEWS = ('https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/'
