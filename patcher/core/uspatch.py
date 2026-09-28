@@ -99,3 +99,20 @@ def apply(raw, pairs):
         i = j + ln
 
     return bytes(d), done
+
+
+def literals(raw):
+    """#US 힙의 문자열 리터럴 집합."""
+    start, size = us_range(raw)
+    us = raw[start:start + size]
+    out = set()
+    i = 0
+    while i < len(us):
+        ln, j = _compressed(us, i)
+        if ln:
+            try:
+                out.add(us[j:j + ln - 1].decode('utf-16-le'))
+            except UnicodeDecodeError:
+                pass
+        i = j + ln
+    return out

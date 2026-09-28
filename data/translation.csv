@@ -1314,6 +1314,9 @@ IE_Name/1198,灵歌哀鸣,Spirit Song Lament,霊歌哀鳴（れいかあいめ�
 IE_Name/1199,巨龙之姿,Dragon Form,竜の姿（りゅうのすがた）,Образ дракона,거룡지자
 IE_Name/1200,春宵一刻,A Moment of Spring Night,春宵一刻（しゅんしょういっこく）,Мгновение весенней ночи,춘소일각
 IE_Name/1201,历史，由您书写,"History, Written by You",歴史は、あなたが記す,Историю пишете вы,"역사는, 당신이 쓰신다"
+IE_Name/1202,血壤,Bloodsoil,血壌（けつじょう）,Кровавая почва,혈양
+IE_Name/1203,慧-凡人心眼,Hui - Mortal Mind's Eye,慧・凡人心眼（けい・ぼんじんしんがん）,Хуэй — Око разума смертного,혜-범인심안
+IE_Name/1204,献上祭品,Offer Sacrifice,生贄を捧げる（いけにえをささげる）,Принести жертву,제물을 바쳐라
 IE_Name/2001,残钢甲,Ruined Steel Armor,残鋼甲,Разрушенная стальная броня,잔강갑
 IE_Name/2002,炽龙心,Blazing Dragon Heart,熾龍心,Пылающее сердце дракона,치룡심
 IE_Name/2003,天象水文录,Records of Astronomy & Hydrology,天象水文録,Записи астрономии и гидрологии,천상수문록
@@ -1470,6 +1473,9 @@ IE_Name/2156,不折铁骨,Unbending Iron Bones,不折鉄骨（ふせつてっこ
 IE_Name/2157,司南,South-Pointing Compass,司南（しなん）,Компас,사남
 IE_Name/2158,柳矢,Willow Arrow,柳矢（りゅうし）,Ивовая стрела,유시
 IE_Name/2159,天书残页,Tattered Page of Heavenly Script,天書残頁（てんしょざんぺい）,Обрывок небесной книги,천서잔엽
+IE_Name/2160,巨人木棒,Giant's Wooden Club,巨人の木棒（きょじんのきぼう）,Дубина гиганта,거인목봉
+IE_Name/2161,蛀蚀根须,Eroding Root Tendrils,蛀蝕根須（そしょくこんしゅ）,Разъедающие корни,좀먹은 뿌리
+IE_Name/2162,破心剑,Heart-Piercing Sword,破心剣（はしんけん）,"Меч, пронзающий сердце",파심검
 IE_Name/3001,赤锁,Scarlet Lock,赤鎖,Алый замок,적쇄
 IE_Name/3002,养尸,Corpse Cultivation,屍飼い,Трупное взращивание,양시
 IE_Name/3003,灵震,Soul Tremor,霊震,Трепет души,영진
@@ -2083,6 +2089,9 @@ IE_Info/1198,任意方式使用卡牌后，回复<#GetValue#>点灵力,"After us
 IE_Info/1199,经过<#CompleteCount#>个回合后，成长为巨龙姿态，灰烬之眼效果翻倍，同时释放自身《龙爪》和《烟火弹》时额外对目标和左右单位追加一段伤害,"After <#CompleteCount#> turns, transform into Dragon Form, doubling the effect of 【Ash Eyes】. Additionally, when using 【Dragon Claw】 and 【Firework Bomb】, deal an extra instance of damage to the target and adjacent units.",<#CompleteCount#>ターン経過後、竜の姿に成長し、【灰燼の眼】の効果が2倍になる。同時に自身の【龍爪】と【煙火弾】を発動する時、対象と左右のユニットに追加で一段のダメージを与える。,"После <#CompleteCount#> ходов превратиться в форму дракона, удвоив эффект 【Пепельные очи】. Кроме того, при использовании 【Драконий коготь】 и 【Фейерверк】 наносить дополнительный удар по цели и соседним отрядам.","<#CompleteCount#>턴이 지난 후 거룡의 모습으로 성장하여 회신지안 효과가 2배가 되고, 동시에 자신의 《용조》와 《연화탄》을 시전할 때 대상 및 좌우 유닛에게 추가로 1단의 피해를 입힙니다."
 IE_Info/1200,第一回合抽取的《桃花烬》费用固定为0且伤害提高<$CardUp$>%,The 【Peach Blossom Ember】 drawn on the first turn costs 0 and deals <$CardUp$>% more damage.,1ターン目に引く【桃花燼】のコストが0に固定され、ダメージが<$CardUp$>%上昇する。,"【Угли персикового цвета】, полученный на первом ходу, стоит 0 и наносит на <$CardUp$>% больше урона.",첫 턴에 뽑은 《도화신》의 비용이 0으로 고정되고 피해가 <$CardUp$>% 증가합니다.
 IE_Info/1201,全场累计触发<#CompleteCount#>次岁月后，将一张《时光如隙》加入手牌,"After a total of <#CompleteCount#> 【Time】 triggers across the field, add one 【Time Slips Like a Gap】 to hand.",フィールド全体で累計<#CompleteCount#>回【歳月】が発動した後、【時は隙の如し】を1枚手札に加える。,"После суммарного срабатывания 【Старение】 на поле <#CompleteCount#> раз, добавить в руку 【Время как щель】.","필드 전체에서 【세월】이 누적 <#CompleteCount#>회 발동한 후, 《시광여극》 1장을 손패에 추가합니다."
+IE_Info/1202,任意己方单位被击后，【汲取】生命值最多的敌人<#GetHp#>点生命值,"After any allied unit is hit, 【Drain】 <#GetHp#> HP from the enemy with the highest HP.",任意の味方ユニットが被弾した後、最もHPが多い敵から<#GetHp#>点のHPを【くみ出す】。,После получения удара любым союзным отрядом 【Осушение】 у врага с наибольшим здоровьем — <#GetHp#> ед. здоровья.,"아무 아군 유닛이 피격된 후, 생명력이 가장 높은 적에게서 생명력 <#GetHp#>을 【흡수】합니다."
+IE_Info/1203,自身的心眼暴击概率翻倍(携带多个专属效果时，线性叠加),"Your Mind's Eye critical hit chance is doubled. (When carrying multiple exclusive effects, they stack linearly.)",自身の心眼のクリティカル確率が2倍になる（複数の専属効果を所持している場合、線形に重複する）。,Шанс критического удара 【Око разума】 удваивается. (При наличии нескольких эксклюзивных эффектов складывается линейно.),자신의 심안 치명타 확률이 2배가 됩니다 (전용 효과를 여러 개 지닌 경우 선형 중첩).
+IE_Info/1204,击杀带有【血祭】的单位后，若手牌中存在《赤符-燃血》，该卡牌费用-<#CostSub#>,"After killing a unit with 【Blood Sacrifice】, if 《Crimson Talisman - Burning Blood》 is in hand, that card's cost is reduced by <#CostSub#>.",【血祭】を持つユニットを撃破した後、手札に《赤符-燃血》がある場合、そのカードのコスト-<#CostSub#>。,"После убийства отряда с 【Кровавая жертва】, если в руке есть 《Багровый талисман — Горящая кровь》, стоимость этой карты -<#CostSub#>.","【혈제】가 있는 유닛을 처치한 후, 손패에 《적부-연혈》이 있으면 해당 카드의 비용 -<#CostSub#>."
 IE_Info/2001,回合结束时，【防御】+<#BuffCount#>,‘+<#BuffCount#> [Defense] at the end of the turn,ターン終了時、「防御」+<#BuffCount#>。,`+<#BuffCount#> [Защита] в конце хода,"턴 종료 시, 【방어】를 <#BuffCount#>만큼 획득합니다."
 IE_Info/2002,回合开始时，每有一层【龙威】，【灵压】和【攻击力】+<#BuffCount#>,"At the start of the turn, +<#BuffCount#> [Spiritual Pressure] and [Attack] per stack of [Dragon's Presence]",ターン開始時、「龍威」1ストックごとに、「霊圧」と「攻撃力」+<#BuffCount#>。,В начале хода +<#BuffCount#> [Духовное давление] и [Атака] за каждый заряд [Присутствие дракона],"턴 시작 시, 보유한 【용위】 1중첩당 【영압】과 【공격력】을 <#BuffCount#>만큼 획득합니다."
 IE_Info/2003,使用<#CompleteCount#>张卡牌后，为尸姬大人献上<#MagcGet#>点灵力,"After using <#CompleteCount#> cards, offer <#MagcGet#> Mana to the Lady Zombie",カードを<#CompleteCount#>枚使用後、屍姫に<#MagcGet#>霊力を与える。,После использования <#CompleteCount#> карт отдаёт <#MagcGet#> Маны Леди-зомби,"카드 <#CompleteCount#>장 사용 후, 시희님께 <#MagcGet#>의 영력을 바칩니다."
@@ -2240,6 +2249,9 @@ IE_Info/2156,,,,,
 IE_Info/2157,对正中间的敌人造成伤害时，必定造成<$Demage$>倍暴击（正中间没有敌人时不触发）。,"When dealing damage to the enemy in the center, it always deals a critical hit for <$Demage$> times damage. (Does not trigger if there is no enemy in the center.)",中央の敵にダメージを与える時、必ず<$Demage$>倍のクリティカルダメージを与える（中央に敵がいない場合は発動しない）。,"При нанесении урона врагу в центре всегда наносится критический урон в <$Demage$> раз (не срабатывает, если в центре нет врага).","정중앙의 적에게 피해를 입힐 때, 반드시 <$Demage$>배의 치명타를 입힙니다 (정중앙에 적이 없으면 발동하지 않음)."
 IE_Info/2158,任意方式使用卡牌后，卡牌伤害+<$DemageAdd$>%,"After using a card by any means, card damage +<$DemageAdd$>%",任意の方法でカードを使用した後、カードダメージ+<$DemageAdd$>%,После использования карты любым способом урон от карт +<$DemageAdd$>%,"임의의 방식으로 카드를 사용 후, 카드 피해 +<$DemageAdd$>%."
 IE_Info/2159,战斗开始时，获得1张《昨日》,"At the start of battle, gain one 【Bygone Days】 card.",戦闘開始時、【往日】を1枚獲得する。,В начале боя получить одну карту 【Минувшие дни】.,"전투 시작 시, 《작일》 1장을 획득합니다."
+IE_Info/2160,对生命值低于自身的敌人造成伤害时，将其斩杀。,"When dealing damage to an enemy whose HP is lower than self, execute it.",自身よりHPが低い敵にダメージを与える時、それを斬殺する。,"При нанесении урона врагу с здоровьем ниже, чем у себя, казнить его.","자신보다 생명력이 낮은 적에게 피해를 입힐 때, 대상을 즉사시킵니다."
+IE_Info/2161,回合开始时，受到自身当前生命值<$CostValue$>%的伤害，（不至死）,"At the start of the turn, takes damage equal to <$CostValue$>% of own current HP (non-lethal).",ターン開始時、自身の現在HPの<$CostValue$>%のダメージを受ける（致死なし）。,"В начале хода получает урон, равный <$CostValue$>% от текущего здоровья (не смертельно).","턴 시작 시, 자신의 현재 생명력의 <$CostValue$>%만큼 피해를 입습니다 (이 효과로 사망하지 않음)."
+IE_Info/2162,暴击后，移除目标<$Demage$>%该次伤害的血量（生命不足时，致死）,"After a critical hit, removes HP equal to <$Demage$>% of that instance of damage from the target (lethal if HP is insufficient).",クリティカル後、対象のHPをそのダメージの<$Demage$>%分除去する（HP不足時、致死）。,После критического удара удаляет у цели здоровье в размере <$Demage$>% от этого урона (смертельно при недостатке здоровья).,"치명타 발생 후, 해당 피해의 <$Demage$>%만큼 대상의 생명력을 제거합니다. 남은 생명력이 부족할 경우 즉사시킵니다."
 IE_Info/3001,每回合结束时，对被标记的敌方单位造成<$Demage$>点卡牌伤害,"At the end of each turn, deal <$Demage$> Card Damage to the [Marked] enemy units",各ターン終了時、マークされた敵ユニットに<$Demage$>カードダメージを与える。,В конце каждого хода наносит <$Demage$> урона картой [Помеченным] вражеским юнитам,"매 턴 종료 시, 표식이 있는 적 유닛에게 <$Demage$>의 카드 피해를 입힙니다."
 IE_Info/3002,每回合结束时，回复<$Heal$>点生命值,"At the end of the turn, restore <$Heal$> HP",各ターン終了時、体力を<$CostHp$>回復する。,В конце хода восстанавливает <$Heal$> здоровья,"매 턴 종료 시, 생명력을 <$Heal$> 회복합니다."
 IE_Info/3003,无异常状态时，被击反伤<$Demage$>点伤害,"When no debuffs are present, reflect <$Demage$> damage on being hit",デバフが付与されていないときに攻撃されると<$Demage$>ダメージを反射する。,"Когда нет дебаффов, отражает <$Demage$> урона при получении удара","상태 이상이 없을 때, 피격 시 <$Demage$>의 피해를 반사합니다."
@@ -2659,6 +2671,9 @@ IE_ExInfo/2156,ExInfo&呵呵，所谓凡人傲骨，尸姬大人有的是时间�
 IE_ExInfo/2157,ExInfo&此方不正，必遭天灾,"ExInfo&If this path is unjust, divine calamity will surely strike.",ExInfo&此方正しからずんば、必ず天災に遭う。,"ExInfo&Если этот путь неверен, обязательно постигнет небесная кара.","ExInfo&이 방위가 바르지 못하면, 반드시 재앙을 만나리라."
 IE_ExInfo/2158,ExInfo&如春风摘柳……,ExInfo&Like a spring breeze plucking willows...,ExInfo&春風が柳を摘む如く……,ExInfo&Как весенний ветер срывает иву...,ExInfo&봄바람이 버들을 꺾듯...
 IE_ExInfo/2159,ExInfo&带有时间力量的书页，这种寻常物什很难进尸姬大人法眼……,ExInfo&A page with the power of time... such ordinary things rarely catch the Corpse Princess's eye...,ExInfo&時の力を持つ書頁、そんな普通のものは屍姫様の目に入りにくい……,ExInfo&Страница с силой времени... такие обычные вещи редко привлекают взгляд Госпожи Шицзи...,ExInfo&시간의 힘이 깃든 책장. 이런 평범한 물건은 시희님의 안목에 들기 어렵다...
+IE_ExInfo/2160,ExInfo&巨人从不会记得自己踩死了多少只蚂蚁……,ExInfo&Giants never remember how many ants they've crushed...,ExInfo&巨人は自分が何匹の蟻を踏み潰したかなど覚えていない……,"ExInfo&Гиганты никогда не помнят, сколько муравьёв они раздавили...",ExInfo&거인은 제 발에 밟혀 죽은 개미가 몇 마리인지 기억하지 않는다...
+IE_ExInfo/2161,ExInfo&真可惜，神赐的外壳依旧坚固，但是里边……已经完全被蛀空了呢……,"ExInfo&What a pity, the god-given shell remains sturdy, but inside... it has been completely hollowed out...",ExInfo&残念だ、神から授かった殻は依然として堅固だが、中は……すっかり蝕まれているね……,"ExInfo&Как жаль, богоданная оболочка всё ещё крепка, но внутри... она полностью выедена...","ExInfo&참으로 아깝구나. 신이 내린 껍데기는 여전히 단단하건만, 그 속은... 이미 남김없이 좀먹어 텅 비었으니..."
+IE_ExInfo/2162,ExInfo&手中无剑，心中有剑，则无剑胜有剑……,"ExInfo&When there is no sword in hand but a sword in the heart, then having no sword surpasses having a sword...",ExInfo&手に剣なく、心に剣あれば、剣なきは剣あるに勝る……,"ExInfo&Когда в руке нет меча, но меч в сердце, то отсутствие меча превосходит обладание мечом...","ExInfo&손에 검이 없어도 마음에 검이 있으면, 검 없음이 검 있음을 이긴다..."
 ReEX_Info_A/1,任意方式使用卡牌后，对卡牌指向目标造成（0.8水灵根）点法术伤害,,,,"임의의 방식으로 카드를 사용한 후, 카드가 지정된 대상에게 (0.8 수영근)의 주문 피해를 입힙니다."
 ReEX_Info_A/2,护盾提高50%,Shield +50%,シールドが50%増加する。,Щит +50%,보호막이 50% 증가합니다.
 ReEX_Info_A/3,获得【血贷】标签,Add the [Blood Loan] tag,ワード「血の契り」を獲得する。,Добавляет метку [Кровавый заем],【혈대】 태그를 획득합니다.
@@ -5606,6 +5621,8 @@ UI/删除,删除,Delete,削除,Удалить,삭제
 UI/覆盖,覆盖,Cover,カバー,Перезаписать,덮어쓰기
 UI/手牌已满,手牌已满,Your hand is full,手札が満タンです,Рука переполнена,손패 가득 참
 UI/确认是否删除该预设,确认是否删除该预设？,Confirm deletion of this preset?,このプリセットを削除してもよろしいですか？,Подтвердить удаление этого пресета?,해당 프리셋을 삭제하시겠습니까?
+UI/关闭己方雷反,关闭己方雷反,Disable your side’s Lightning Counter effect,味方の雷返し効果を無効化する,Отключить эффект «Молниевый контрудар» своей стороны,아군 뇌반 끄기
+UI/未开启雷反,<color=#FF0000>未开启雷反</color>,<color=#FF0000>Lightning Counter not enabled</color>,<color=#FF0000>雷返し：オフ</color>,<color=#FF0000>Молниевый контрудар не включён</color>,<color=#FF0000>뇌반 꺼짐</color>
 Load_TipName/1,暴击,Critical Hit,会心（かいしん）,Критический удар,치명타
 Load_TipName/2,护盾,Shield,シールド,Щит,보호막
 Load_TipName/3,伤害,Damage,ダメージ,Урон,피해

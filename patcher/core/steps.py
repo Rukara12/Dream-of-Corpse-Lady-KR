@@ -31,29 +31,131 @@ class Ctx:
 
 
 # ─────────────────────────────────────────────── 백업
+STATE_FILE = 'patch_state.json'
+
+
+def backup_files(ctx):
+    return (list(ctx.man['assets']) + list(ctx.man.get('assets_extra') or [])
+            + [DLL_REL])
+
+
+def _stamp(path):
+    st = os.stat(path)
+    return [st.st_size, st.st_mtime_ns]
+
+
+def _same(a, b):
+    """크기가 같고 수정 시각이 2초 안이면 같은 파일로 본다 (파일 시스템마다 시각 정밀도가 다르다)."""
+    return bool(a and b) and a[0] == b[0] and abs(a[1] - b[1]) < 2_000_000_000
+
+
+def _contains(path, needle):
+    tail = b''
+    with open(path, 'rb') as f:
+        while True:
+            chunk = f.read(8 << 20)
+            if not chunk:
+                return False
+            if needle in tail + chunk:
+                return True
+            tail = chunk[-(len(needle) - 1):]
+
+
+def _copy(src, dst):
+    """임시 파일로 복사한 뒤 바꿔 끼운다. 도중에 끊겨도 반쪽 백업이 남지 않는다."""
+    tmp = dst + '.tmp'
+    shutil.copy2(src, tmp)
+    os.replace(tmp, dst)
+
+
+def looks_patched(ctx, name, path):
+    """이 패처가 이미 손댄 파일인지 내용으로 판별한다. 표식이 없는 파일은 False."""
+    try:
+        if name == os.path.basename(DLL_REL):
+            lits = uspatch.literals(open(path, 'rb').read())
+            return '【' not in lits and '《' in lits
+        if name == 'resources.assets':
+            return _contains(path, '한국어'.encode('utf-8'))
+        if name.startswith('sharedassets'):
+            ttf = open(os.path.join(ctx.res, ctx.man['font']['file']), 'rb').read()
+            mid = len(ttf) // 2
+            marks = [ttf[mid:mid + 64]]
+            cfg = ctx.man.get('extra_text')
+            if cfg and cfg.get('asset') == name:
+                ko = sorted(load_extra(os.path.join(ctx.res, cfg['file'])).values(), key=len)
+                if ko:
+                    marks.append(ko[-1].encode('utf-8'))
+            return any(_contains(path, m) for m in marks)
+    except Exception:          # 판별 실패는 '표식 없음'으로 본다
+        return False
+    return False
+
+
+def load_state(ctx):
+    try:
+        with io.open(os.path.join(ctx.backup, STATE_FILE), encoding='utf-8') as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
+
+
+def record_state(ctx):
+    """게임에 쓴 파일의 크기·수정 시각을 남긴다.
+
+    다음 실행 때 '이 패처가 쓴 파일'과 '게임 업데이트로 새로 받은 원본'을
+    가르는 기준이 된다.
+    """
+    st = {'patched': {}}
+    for rel in backup_files(ctx):
+        p = os.path.join(ctx.out, rel)
+        if os.path.exists(p):
+            st['patched'][os.path.basename(rel)] = _stamp(p)
+    with io.open(os.path.join(ctx.backup, STATE_FILE), 'w', encoding='utf-8') as f:
+        json.dump(st, f, ensure_ascii=False, indent=1)
+
+
 def ensure_backup(ctx):
+    """원본 백업을 준비한다. 게임이 업데이트됐으면 백업을 새 원본으로 바꾼다.
+
+    게임 파일 하나하나에 대해
+      백업과 같다                 -> 원본 그대로
+      지난번에 이 패처가 쓴 파일   -> 원본은 백업에 있다
+      둘 다 아니다                -> 새 원본(업데이트·무결성 검사). 백업 갱신
+    기록이 없던 예전 패처가 쓴 파일은 내용 표식으로 알아보고 백업을 유지한다.
+    """
     os.makedirs(ctx.backup, exist_ok=True)
-    files = list(ctx.man['assets']) + list(ctx.man.get('assets_extra') or []) + [DLL_REL]
-    made = 0
-    for rel in files:
-        dst = os.path.join(ctx.backup, os.path.basename(rel))
-        if os.path.exists(dst):
-            continue
-        shutil.copy2(os.path.join(ctx.gd, rel), dst)
-        made += 1
-    if made:
-        ctx.log('원본 백업 %d개 생성' % made)
-    for rel in files:
-        dst = os.path.join(ctx.backup, os.path.basename(rel))
+    patched = load_state(ctx).get('patched', {})
+    made, renewed, kept = [], [], []
+    for rel in backup_files(ctx):
+        name = os.path.basename(rel)
+        dst = os.path.join(ctx.backup, name)
         live = os.path.join(ctx.gd, rel)
-        try:
-            a, b = os.path.getsize(dst), os.path.getsize(live)
-        except OSError:
+        if not os.path.exists(dst):
+            if looks_patched(ctx, name, live):
+                raise finder.NotFound(
+                    '%s 의 원본 백업이 없는데 게임 파일은 이미 패치돼 있습니다.\n'
+                    'Steam에서 게임 파일 무결성 검사를 한 뒤 다시 실행해 주십시오.' % name)
+            _copy(live, dst)
+            made.append(name)
             continue
-        ctx.log('  %s 백업 %s B / 현재 %s B' %
-                (os.path.basename(rel), format(a, ','), format(b, ',')))
-    return {n: os.path.join(ctx.backup, n) for n in
-            [os.path.basename(f) for f in files]}
+        now = _stamp(live)
+        if _same(now, _stamp(dst)) or _same(now, patched.get(name)):
+            continue
+        if looks_patched(ctx, name, live):
+            kept.append(name)
+            continue
+        _copy(live, dst)
+        renewed.append(name)
+    if made:
+        ctx.log('원본 백업 생성: %s' % ', '.join(made))
+    if renewed:
+        ctx.log('게임 업데이트 감지 — 원본 백업 갱신: %s' % ', '.join(renewed))
+    if kept:
+        ctx.log('이전 패치 흔적 확인 — 기존 백업 유지: %s' % ', '.join(kept))
+    if not (made or renewed or kept):
+        ctx.log('원본 백업 확인')
+    return {os.path.basename(f): os.path.join(ctx.backup, os.path.basename(f))
+            for f in backup_files(ctx)}
 
 
 def src_path(ctx, name):

@@ -195,7 +195,8 @@ class App:
                 (68, '추가 텍스트 적용', lambda: steps.step_extra(ctx, cache)),
                 (69, '태그 표기 수정',  lambda: steps.step_rich(ctx, cache)),
                 (70, '표기 순서 수정',  lambda: steps.step_code(ctx)),
-                (98, '게임에 저장',     lambda: steps.save_all(ctx, cache)),
+                (97, '게임에 저장',     lambda: steps.save_all(ctx, cache)),
+                (99, '설치 기록',       lambda: steps.record_state(ctx)),
             ):
                 self.emit('· ' + msg)
                 fn()
