@@ -1126,8 +1126,8 @@ IE_Name/1068,凡人心,Mortal Heart,凡人心,Смертное сердце,범�
 IE_Name/1069,所谓生死,Answer of Life and Death,生死とは何ぞ,Ответ жизни и смерти,이른바 생사란
 IE_Name/1070,所谓神明,Nature of Divinity,神とは何ぞ,Природа божественности,이른바 신명이란
 IE_Name/1071,灵感,Inspiration,霊感,Вдохновение,영감
-IE_Name/11071,灵感-速写,Inspiration - Sketch,霊感-速写,Вдохновение — Набросок,영감-속사
-IE_Name/21071,灵感-临摹,Inspiration - Copy,霊感-模写,Вдохновение — Копия,영감-임모
+IE_Name/11071,灵感-速写,Inspiration - Sketch,霊感-速写,Вдохновение — Набросок,영감-소묘
+IE_Name/21071,灵感-临摹,Inspiration - Copy,霊感-模写,Вдохновение — Копия,영감-모사
 IE_Name/1072,藏涩,Hidden Debauchery,秘めた渋み,Скрытое распутство,장색
 IE_Name/1073,白描,Line Drawing,白描,Контурный рисунок,백묘
 IE_Name/1074,红熏,Red Brush,紅染,Красная кисть,홍훈
@@ -1145,7 +1145,7 @@ IE_Name/11080,溺死的鱼-绝望,Drowned Fish - Despair,溺れた魚-絶望,У�
 IE_Name/21080,溺死的鱼-苟且,Drowned Fish - Desperate Survival,溺れた魚-苟且,Утонувшая рыба — Отчаянное выживание,익사어-구차
 IE_Name/1081,浑浑噩噩的黎明,Muddleheaded Dawn,ぼんやりとした夜明け,Туманный рассвет,혼몽한 새벽
 IE_Name/1082,真可惜，没死呢,Still alive? What a pity,死んでない、惜しいね,Еще жив? Какая жалость,"아쉽게도, 아직 안 죽었네"
-IE_Name/1083,等待死亡的每一天,Days Awaiting Death,死を待つ毎日,Дни в ожидании смерти,죽음을 기다리는 매일
+IE_Name/1083,等待死亡的每一天,Days Awaiting Death,死を待つ毎日,Дни в ожидании смерти,죽음을 기다리는 나날
 IE_Name/1084,刀俎与鱼肉,Butcher and Meat,刀台と魚肉,Мясник и мясо,도마와 생선
 IE_Name/1085,尸龙血,Dragon Carcass Blood,屍龍血,Кровь драконьей падали,시룡혈
 IE_Name/11085,尸龙血-升灵,Dragon Carcass Blood - Ascender,屍龍血-昇霊,Кровь драконьей падали — Возносящийся,시룡혈-승령
@@ -1210,7 +1210,7 @@ IE_Name/11125,阴司-严刑,Netherworld - Torment,陰司-厳刑,Преиспод
 IE_Name/21125,阴司-冥狱,Netherworld - Abyssal Hell,陰司-冥獄,Преисподняя — Бездонный ад,음사-명옥
 IE_Name/1126,冥狱之锁,Abyssal Shackles,冥獄の鎖,Бездонные оковы,명옥지쇄
 IE_Name/1127,罪责之躯,Vessel of Guilt,罪責の身,Сосуд вины,죄책의 몸
-IE_Name/1128,罪孽,Sin,罪業,Грех,죄얼
+IE_Name/1128,罪孽,Sin,罪業,Грех,죄악
 IE_Name/11128,罪孽-等待发酵,Sin - Awaiting Escalation,罪業-積み重ね,Грех — В ожидании эскалации,죄악-발효 대기
 IE_Name/21128,罪孽-亡羊补牢,Sin - Damage Control,罪業-亡羊補牢,Грех — Контроль урона,죄악-망양보뢰
 IE_Name/1129,法相,Nether Tribunal: Hades' Prison,法相（ほうそう）,Преисподний трибунал: Темница Аида,법상
@@ -1272,12 +1272,12 @@ IE_Name/1166,长忆,Enduring Memory,長憶（ちょうおく）,Стойкая �
 IE_Name/1167,转念,Shifting Mind,転念（てんねん）,Изменчивый разум,전념
 IE_Name/1168,春日吟,Spring Chants,春日吟（しゅんじつぎん）,Весенние напевы,춘일음
 IE_Name/11168,春日吟-和风,Spring Chants - Gentle Breeze,春日吟-穏風（おんふう）,Весенние напевы — Легкий ветерок,춘일음-화풍
-IE_Name/21168,春日吟-煦日,Spring Chants - Warm Sun,春日吟-日和（びより）,Весенние напевы — Теплое солнце,춘일음-욱일
+IE_Name/21168,春日吟-煦日,Spring Chants - Warm Sun,春日吟-日和（びより）,Весенние напевы — Теплое солнце,춘일음-난양
 IE_Name/1169,旧神音,Voice of Ancient Deity,旧神音（きゅうしんおん）,Голос древнего божества,구신음
 IE_Name/1170,堕神泪,Tear of Fallen Deity,堕神涙（だしんるい）,Слеза павшего божества,타신루
 IE_Name/1171,春曦-神契之花,Vernal Light - Divine Covenant Flower,春曦-神契の花（しゅんき-しんけいのはな）,Весенний свет — Цветок божественного завета,춘희-신계지화
 IE_Name/1172,懒懒虎,Lazy Tiger,怠け虎（なまけとら）,Ленивый тигр,나나호
-IE_Name/11172,懒懒虎-调休,Lazy Tiger - Time Off,怠け虎-振替休暇（ふりかえきゅうか）,Ленивый тигр — Выходной,나나호-조휴
+IE_Name/11172,懒懒虎-调休,Lazy Tiger - Time Off,怠け虎-振替休暇（ふりかえきゅうか）,Ленивый тигр — Выходной,나나호-휴무
 IE_Name/21172,懒懒虎-加班,Lazy Tiger - Overtime Work,怠け虎-残業（ざんぎょう）,Ленивый тигр — Сверхурочные,나나호-야근
 IE_Name/1173,大馋猫,Bottomless Kitten,食いしん坊猫（くいしんぼうねこ）,Бездонный котенок,대참묘
 IE_Name/1174,我要吃肉！！,I Want Meat!!,肉を食べたい！！（にくをたべたい）,Хочу мяса!!,고기가 먹고 싶어!!
@@ -1313,7 +1313,7 @@ IE_Name/1197,灵蚀,Spirit Erosion,霊蝕（れいしょく）,Духовная 
 IE_Name/1198,灵歌哀鸣,Spirit Song Lament,霊歌哀鳴（れいかあいめい）,Скорбная песнь духов,영가애명
 IE_Name/1199,巨龙之姿,Dragon Form,竜の姿（りゅうのすがた）,Образ дракона,거룡지자
 IE_Name/1200,春宵一刻,A Moment of Spring Night,春宵一刻（しゅんしょういっこく）,Мгновение весенней ночи,춘소일각
-IE_Name/1201,历史，由您书写,"History, Written by You",歴史は、あなたが記す,Историю пишете вы,"역사는, 당신이 쓰신다"
+IE_Name/1201,历史，由您书写,"History, Written by You",歴史は、あなたが記す,Историю пишете вы,"역사는, 당신께서 쓰십니다"
 IE_Name/1202,血壤,Bloodsoil,血壌（けつじょう）,Кровавая почва,혈양
 IE_Name/1203,慧-凡人心眼,Hui - Mortal Mind's Eye,慧・凡人心眼（けい・ぼんじんしんがん）,Хуэй — Око разума смертного,혜-범인심안
 IE_Name/1204,献上祭品,Offer Sacrifice,生贄を捧げる（いけにえをささげる）,Принести жертву,제물 헌상
@@ -1340,7 +1340,7 @@ IE_Name/2020,血牙刀,Bloody Fang,血牙刀,Кровавый клык,혈아도
 IE_Name/2021,火酒葫芦,Fiery Liquor Gourd,火酒瓢箪,Тыква огненного вина,화주호로
 IE_Name/2022,冰脊盾,Ice Ridge Shield,氷脊盾（ひょうせきとん）,Щит ледяного гребня,빙척순
 IE_Name/2023,灵箭-飞柳,Spiritual Arrow - Willow,霊矢-飛柳,Духовная стрела — Ива,영전-비류
-IE_Name/2024,日规,Sundial,日規,Солнечные часы,일규
+IE_Name/2024,日规,Sundial,日規,Солнечные часы,해시계
 IE_Name/2025,春神仙裳,Spring Goddess's Robe,春神仙裳,Одеяние богини весны,춘신선상
 IE_Name/2026,跃雷石,Thunderbolt Stone,躍雷石（やくらいせき）,Громовой камень,약뢰석
 IE_Name/2027,天雷神兵,Armament of Heavenly Lightning,天雷神兵,Оружие небесной молнии,천뢰신병
@@ -1376,7 +1376,7 @@ IE_Name/2056,青石简,Bluestone Tablet,青石簡,Скрижаль из сине
 IE_Name/2057,神罪之棺,Coffin of Divine Sin,神罪の棺,Гроб божественного греха,신죄의 관
 IE_Name/2058,凝魂丹,Soul Coalescer,凝塊丹,Сгуститель душ,응혼단
 IE_Name/2059,残红瓣,Faded Petal,残紅瓣,Поблекший лепесток,잔홍판
-IE_Name/2060,杏核,Apricot Pit,杏核,Абрикосовая косточка,행핵
+IE_Name/2060,杏核,Apricot Pit,杏核,Абрикосовая косточка,살구씨
 IE_Name/2061,清醒木,Sobering Bar,清醒木,Трезвящая закусочная,청성목
 IE_Name/2062,带刺圆环,Spiked Circlet,棘付き円環,Шипастый венец,가시 고리
 IE_Name/2063,锈蚀龟壳,Rusted Turtle Shell,錆びた甲羅,Ржавый черепаший панцирь,수식귀각
@@ -1434,7 +1434,7 @@ IE_Name/2117,摄魂宝扇,Soul-Snatcher Fan,摂魂宝扇（せっこんほうせ
 IE_Name/2118,合欢仙露,Elixir of Carnal Bliss,合歓仙露（ごうかんせんろ）,Эликсир плотского блаженства,합환선로
 IE_Name/2119,东海龙珠,Dragon Orb of the East Sea,東海龍珠（とうかいりゅうじゅ）,Сфера дракона Восточного моря,동해용주
 IE_Name/2120,云雨符,Sigil of Carnal Desire,雲雨符（うんうふ）,Печать плотского желания,운우부
-IE_Name/2121,回旋镖,Boomerang,回旋手裏剣（かいせんしゅりけん）,Бумеранг,회선표
+IE_Name/2121,回旋镖,Boomerang,回旋手裏剣（かいせんしゅりけん）,Бумеранг,부메랑
 IE_Name/2122,炼丹炉,Alchemy Cauldron,煉丹炉（れんたんろ）,Алхимический котел,연단로
 IE_Name/2123,护身葫芦,Guardian Gourd,護身瓢箪（ごしんひょうたん）,Тыква-страж,호신호로
 IE_Name/2124,镇魂碑,Soul-Sealing Stele,鎮魂碑（ちんこんひ）,"Стела, запечатывающая душу",진혼비
@@ -1445,7 +1445,7 @@ IE_Name/2128,灵玉砂,Spiritual Jade Grain,霊玉砂（れいぎょくさ）,З
 IE_Name/2129,囚魂锁,Soul-Capturing Chain,囚魂鎖（しゅうこんさ）,"Цепь, пленяющая душу",수혼쇄
 IE_Name/2130,赤色大剑,Crimson Greatsword,赤い大剣（あかいたいけん）,Багровый двуручный меч,적색대검
 IE_Name/2131,赤龙齿,Crimson Dragon Tooth,赤龍牙（せきりゅうが）,Багровый драконий зуб,적룡치
-IE_Name/2132,骨灰盒,Ash Urn,骨壺（こつつぼ）,Урна с пеплом,골회함
+IE_Name/2132,骨灰盒,Ash Urn,骨壺（こつつぼ）,Урна с пеплом,유골함
 IE_Name/2133,连心锁,Heart Link,連心鎖（れんしんさ）,Связь сердец,연심쇄
 IE_Name/2134,白绫,White Ribbon,白綾（びゃくれい）,Белая лента,백릉
 IE_Name/2135,生息之种,Seed of Vitality,生息の種（せいそくのたね）,Семя жизненной силы,생식지종
@@ -1495,7 +1495,7 @@ IE_Name/3016,穿心草人,Heart-Piercing Straw Man,串刺し案山子（かか�
 IE_Name/3017,雷震,Thunder Shock,雷震,Громовой разряд,뇌진
 IE_Name/3018,雷之核,Lightning Core,雷の核,Молниевое ядро,뇌의 핵
 IE_Name/3019,石壳,Stone Shell,石の甲羅,Каменная оболочка,석각
-IE_Name/3020,呱之歌,Frog Song,ゲロの歌,Песнь лягушки,고지가
+IE_Name/3020,呱之歌,Frog Song,ゲロの歌,Песнь лягушки,개굴개굴 노래
 IE_Name/3021,睚眦必报,Ever Vengeful,睚眦必報（がいさいひほう）,Вечно мстительный,애자필보
 IE_Name/3022,决睚之眼,Gaze of Vengeance,決睚（ぜつがい）の眼,Взор возмездия,결애지안
 IE_Name/3023,嘲风羽,Gust Mocker's Feather,嘲風羽,Перо насмешника ветра,조풍우
@@ -1547,7 +1547,7 @@ IE_Name/3068,邪魔烙印,Evil's Stigma,邪魔の烙印,Стигма зла,사�
 IE_Name/3069,娇泣之雨,Sobbing Rain,嬌泣（きょうきゅう）の雨,Рыдающий дождь,교읍지우
 IE_Name/3070,推股,Hip Pusher,股押し,Толкатель бедер,추고
 IE_Name/3071,虚空王座,Void Throne,虚空王座,Трон пустоты,허공왕좌
-IE_Name/3072,虚空禁锢,Void Shackle,虚空金縛り,Оковы пустоты,허공금고
+IE_Name/3072,虚空禁锢,Void Shackle,虚空金縛り,Оковы пустоты,허공봉인
 IE_Name/3073,云流之体,Body of Flowing Cloud,雲流れの体,Тело текучего облака,운류지체
 IE_Name/3074,沉堕之雨,Rain of Decadence,沈堕の雨,Дождь упадка,침타지우
 IE_Name/3075,靡靡无根水,Decadent Rootless Water,靡靡（ひひ）無根水,Упадочная вода без корней,미미무근수
@@ -1591,7 +1591,7 @@ IE_Name/3112,紫叶春风,Purple Leaves & Spring Breeze,紫葉春風,Пурпу�
 IE_Name/3113,灵汁玉髓,Spirit Essence & Jade Marrow,霊汁玉髄（れいじゅうぎょくずい）,Эссенция духа и нефритовый мозг,영즙옥수
 IE_Name/3114,灵咒法衣,Imbued Vestment,霊呪法衣,Напитанное облачение,영주법의
 IE_Name/3115,炼丹,Alchemy Work,錬丹,Алхимический труд,연단
-IE_Name/3116,炸炉,Alchemy Failure,爆炉,Провал алхимии,작로
+IE_Name/3116,炸炉,Alchemy Failure,爆炉,Провал алхимии,화로 폭발
 IE_Name/3117,灵力汁液,Spiritual Energy Sap,霊力の汁,Истощение духовной энергии,영력 즙
 IE_Name/3118,替命,Life Substitution,命替り,Замена жизни,체명
 IE_Name/3119,尸爆术,Corpse Explosion,屍爆術,Трупный взрыв,시폭술
@@ -1615,7 +1615,7 @@ IE_Name/3136,跃龙门,Leaping the Dragon Gate,躍龍門,Прыжок через
 IE_Name/3137,手贱,Itchy Fingers,ドジ,Зудящие пальцы,손버릇
 IE_Name/3138,蜗牛的小嫩肉,Snail's Tender Flesh,蝸の軟らかい肉,Нежная плоть улитки,달팽이의 연한 살
 IE_Name/3139,我是小青龙！,I Am the Little Azure Dragon!,我青龍なり！,Я — Малый лазурный дракон!,나는야 소청룡!
-IE_Name/3140,小青龙哈气,Little Azure Dragon's Hiss,小青龍の怒り,Шипение малого лазурного дракона,소청룡 하품
+IE_Name/3140,小青龙哈气,Little Azure Dragon's Hiss,小青龍の怒り,Шипение малого лазурного дракона,소청룡의 하악질
 IE_Name/3141,水鳞,Scales of Water,水鱗,Чешуя воды,수린
 IE_Name/3142,钳击,Pincer Strike,鉗撃（かんげき）,Удар-клещи,집게 공격
 IE_Name/3143,垃圾，好吃,"Trash, yummy",ゴミ、美味しい,"Объедки, вкуснятина","쓰레기, 맛있다"
