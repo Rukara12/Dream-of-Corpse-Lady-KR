@@ -709,7 +709,7 @@ Retrainer_Name/555,铁铳营,Musket Corps,鉄砲営,Мушкетерский к�
 Retrainer_Name/556,铁卫,Iron Guard,鉄護衛,Железный страж,철위
 Retrainer_Name/557,符师,Sigil Master,符師,Мастер печатей,부사
 Retrainer_Name/558,龙霄军,Draconis Army,龍宵軍,Драконья армия,용소군
-Retrainer_Name/559,清雾之蝶,Mist Butterfly,清霧（せいむ）の蝶,Туманная бабочка,청무접
+Retrainer_Name/559,清雾之蝶,Mist Butterfly,清霧（せいむ）の蝶,Туманная бабочка,청무지접
 Retrainer_Name/560,浊气妖花,Miasma Flower,濁気妖花,Цветок миазмов,탁기요화
 Retrainer_Name/561,清浊异兽,Paradox Beast,清濁（せいだく）異獣,Парадоксальный зверь,청탁이수
 Retrainer_Name/562,幽灵狱卒,Spectral Jailer,幽霊獄卒,Призрачный тюремщик,유령 옥졸
@@ -808,7 +808,7 @@ Retrainer_Name/1078,天门庙祝,Heavenly Gate Temple Priest,天門廟祝（て�
 Retrainer_Name/1079,始龙古帝,Ancestral Dragon Emperor,始龍古帝,Драконий император-прародитель,시룡고제
 Retrainer_Name/1080,云剑-风月白,Cloud Sword - Lunar White,雲剣-風月白,Облачный меч — Лунно-белый,운검-풍월백
 Retrainer_Name/1081,隐居士,Hermit,隠居士（いんきょし）,Отшельник,은거사
-Retrainer_Name/1082,恶腐之花,Flower of Corruption,悪腐の花,Цветок порчи,악부화
+Retrainer_Name/1082,恶腐之花,Flower of Corruption,悪腐の花,Цветок порчи,악부지화
 Retrainer_Name/1083,竹天宝,Bamboo Cub,竹天宝,Бамбуковый детеныш,죽천보
 Retrainer_Name/1084,杀神-西王,God of Slaughter - The West Lord,殺神-西王,Бог резни — Владыка Запада,살신-서왕
 Retrainer_Name/1085,黑猫,Black Cat,黒猫,Черный кот,흑묘
@@ -1013,8 +1013,8 @@ IE_Name/31001,锁定天赋（灵弓手）,Locked Talent (Spiritual Archer),固�
 IE_Name/1002,春神使,Spring Goddess's Herald,春神使い,Вестник богини весны,춘신사
 IE_Name/1003,灵弓之主,Master of the Spiritual Bow,雷矢の主,Мастер духовного лука,영궁의 주인
 IE_Name/1004,咒之舌,Cursed Tongue,呪いの舌,Проклятый язык,주지설
-IE_Name/11004,咒之舌-凶,Cursed Tongue - Fierce,呪いの舌-凶,Проклятый язык — Свирепость,주설-흉
-IE_Name/21004,咒之舌-惧,Cursed Tongue - Fear,呪いの舌-惧,Проклятый язык — Страх,주설-구
+IE_Name/11004,咒之舌-凶,Cursed Tongue - Fierce,呪いの舌-凶,Проклятый язык — Свирепость,주지설-흉
+IE_Name/21004,咒之舌-惧,Cursed Tongue - Fear,呪いの舌-惧,Проклятый язык — Страх,주지설-구
 IE_Name/31004,锁定天赋（怨灵）,Locked Talent (Wraith),固定天賦（怨霊）,Закрытый талант (Призрак),천부 고정 (원령)
 IE_Name/1005,神之遗民,Deity's Descendant,神の遺民,Потомок божества,신의 유민
 IE_Name/1006,上古之灵,Ancient Spirit,古の霊,Древний дух,상고의 영
@@ -1025,11 +1025,11 @@ IE_Name/31007,锁定天赋（复生盾卫）,Locked Talent (Shield Revenant),固
 IE_Name/1008,春神之盾,Spring Goddess's Shield,春神の盾,Щит богини весны,춘신의 방패
 IE_Name/1009,长眠,Long Slumber,永き眠り,Долгий сон,장면
 IE_Name/1010,怨之核,Core of Resentment,怨の核,Ядро злобы,원지핵
-IE_Name/11010,怨之核-凝刻,Core of Resentment - Engrave,怨の核-凝刻（ねいこく）,Ядро злобы — Гравировка,원핵-응각
-IE_Name/21010,怨之核-燃恨,Core of Resentment - Burning Hatred,怨の核-燃恨（ねんこん）,Ядро злобы — Пылающая ненависть,원핵-연한
+IE_Name/11010,怨之核-凝刻,Core of Resentment - Engrave,怨の核-凝刻（ねいこく）,Ядро злобы — Гравировка,원지핵-응각
+IE_Name/21010,怨之核-燃恨,Core of Resentment - Burning Hatred,怨の核-燃恨（ねんこん）,Ядро злобы — Пылающая ненависть,원지핵-연한
 IE_Name/31010,锁定天赋（怨骷髅）,Locked Talent (Wrathful Skull),固定天賦（怨霊髑髏）,Закрытый талант (Гневный череп),천부 고정 (원해골)
-IE_Name/1011,神弃之眼,Eye of Forsaken,神棄の眼,Око отверженных,신기안
-IE_Name/1012,噬灵之齿,Soul-Devouring Fangs,霊喰いの牙,Душепожирающие клыки,서령치
+IE_Name/1011,神弃之眼,Eye of Forsaken,神棄の眼,Око отверженных,신기지안
+IE_Name/1012,噬灵之齿,Soul-Devouring Fangs,霊喰いの牙,Душепожирающие клыки,서령지치
 IE_Name/1013,尸躯,Carcass,屍体,Падаль,시구
 IE_Name/11013,尸躯-灵,Carcass - Spirit,屍体-霊,Падаль — Дух,시구-영
 IE_Name/21013,尸躯-血,Carcass - Blood,屍体-血,Падаль — Кровь,시구-혈
@@ -1039,8 +1039,8 @@ IE_Name/1015,沉褐之血,Blackish Blood,褐色の血,Черноватая кр�
 IE_Name/1016,掂血之手,Blood-Seeking Hand,血を量る手,Кровоищущая длань,점혈의 손
 IE_Name/1017,封火之符,Sealing Sigil of Fire,封火の符,Запечатывающая печать огня,봉화의 부적
 IE_Name/1018,祸之触,Touch of Calamity,禍の触れ,Прикосновение бедствия,화지촉
-IE_Name/11018,祸之触-舔,Touch of Calamity - Lick,禍の触れ-舐め,Прикосновение бедствия — Лизок,화촉-핥기
-IE_Name/21018,祸之触-撅,Touch of Calamity - Scoop,禍の触れ-折れ,Прикосновение бедствия — Зачерпывание,화촉-파내기
+IE_Name/11018,祸之触-舔,Touch of Calamity - Lick,禍の触れ-舐め,Прикосновение бедствия — Лизок,화지촉-핥기
+IE_Name/21018,祸之触-撅,Touch of Calamity - Scoop,禍の触れ-折れ,Прикосновение бедствия — Зачерпывание,화지촉-파내기
 IE_Name/31018,锁定天赋（祸太岁）,Locked Talent (Calamity Lord),固定天賦（タコ姫）,Закрытый талант (Владыка бедствий),천부 고정 (화태세)
 IE_Name/1019,病之心,Plague Heart,病の心,Чумное сердце,병든 마음
 IE_Name/1020,灾之眼,Eye of Disaster,災の眼,Око бедствия,재앙의 눈
@@ -1100,7 +1100,7 @@ IE_Name/1050,毒翅,Toxic Wings,毒翼,Ядовитые крылья,독시
 IE_Name/11050,毒翅-瘟疫,Toxic Wings - Plague,毒翼-疫病,Ядовитые крылья — Чума,독시-온역
 IE_Name/21050,毒翅-凋零,Toxic Wings - Withering,毒翼-凋落,Ядовитые крылья — Увядание,독시-조령
 IE_Name/1051,神恶的生灵,Forsaken Beings,悪の生霊,Отверженные существа,신악의 생령
-IE_Name/1052,生于尸骸的幻翅,Carcass Phantom Wings,死骸より生まれる翼,Призрачные крылья падали,시해에서 태어난 환시
+IE_Name/1052,生于尸骸的幻翅,Carcass Phantom Wings,死骸より生まれる翼,Призрачные крылья падали,시해에서 돋아난 환영의 날개
 IE_Name/1053,血气溃败,Blood Decay,血気崩壊,Кровавый тлен,혈기 궤패
 IE_Name/1054,残影拳,Blurring Fist,残影拳,Размытый кулак,잔영권
 IE_Name/11054,残影拳-崩雷,Blurring Fist - Thunder,残影拳-崩雷,Размытый кулак — Гром,잔영권-붕뢰
@@ -1569,7 +1569,7 @@ IE_Name/3090,活死人之心,Heart of the Living Dead,生ける屍の心,Сер�
 IE_Name/3091,活死人之躯,Body of the Living Dead,生ける屍の肉体,Тело живого мертвеца,활사인의 육체
 IE_Name/3092,活死人的执念,Obsession of the Living Dead,生ける屍の執念,Одержимость живого мертвеца,활사인의 집념
 IE_Name/3093,半尸的残躯,Remnant of a Half-Corpse,半屍の残躯,Останок полутрупа,반시의 잔구
-IE_Name/3094,破碎的剑意,Shattered Sword Intent,砕かれた剣意,Расколотая воля меча,파쇄된 검의
+IE_Name/3094,破碎的剑意,Shattered Sword Intent,砕かれた剣意,Расколотая воля меча,파쇄검의
 IE_Name/3095,渴血,Bloodthirst,血に渇く,Жажда крови,갈혈
 IE_Name/3096,肉食动物,Carnivore,肉食動物,Хищник,육식동물
 IE_Name/3097,吃货体质,Gourmand,食いしん坊,Гурман,먹보 체질
@@ -1674,7 +1674,7 @@ IE_Name/3195,契约之奴,Slave by Contract,契約の奴隷,Раб по конт
 IE_Name/3196,绘涩,Eros,絵渋（えじゅう）,Эрос,춘화
 IE_Name/3197,哀鸣,Lament,哀鳴,Плач,애명
 IE_Name/3198,悟剑,Sword Revelation,悟剣,Откровение меча,오검
-IE_Name/3199,嘎——嘎！嘎！,Gah—Gah! Gah!,ガ――ガ！ガ！,Га—га! Га!,짹—짹! 짹!
+IE_Name/3199,嘎——嘎！嘎！,Gah—Gah! Gah!,ガ――ガ！ガ！,Га—га! Га!,까악—까악! 까악!
 IE_Name/3200,归去来兮,The Great Returning,いざ帰りなん,Великое возвращение,귀거래사
 IE_Name/3201,妙法葫芦,Mystique Gourd,妙法瓢箪,Таинственная тыква,묘법호로
 IE_Name/3202,驭灵斩,Spiritual Slash,馭霊斬（ぎょれいざん）,Духовный разрез,어령참
