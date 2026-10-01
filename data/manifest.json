@@ -17,6 +17,11 @@
       "assembly_sha256": "ddf6bfda48a6cdcbaa94bbe7c3049f9f554837b64fbc3fac139e70fe18cf5925",
       "checked": "2026-09-28",
       "note": "게임 업데이트 후 재검증. 신규 번역 17항목 추가."
+    },
+    {
+      "assembly_sha256": "3c736d706c023da60b3f10126bf22d66ea10706f2626739714ac6bf3a5601776",
+      "checked": "2026-10-01",
+      "note": "9-30 업데이트 후 재검증. 원문 변경 1항목(Card_Info/1018)."
     }
   ],
   "assets": [
